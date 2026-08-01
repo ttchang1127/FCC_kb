@@ -397,7 +397,7 @@
       "id": "P1-CFR-1.70014",
       "priority": 1,
       "order": 190,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70014 Processing of applications 條文卡",
@@ -417,7 +417,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:41:07Z",
+          "summary": "45-day streamlined、90-day nonstreamlined/extension、same-day Executive service 與例外逐段；instruction14延後隔離；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:40:36Z",
+      "completed_at": "2026-08-01T06:41:07Z"
     },
     {
       "id": "P1-CFR-1.70015",
