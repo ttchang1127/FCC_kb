@@ -430,7 +430,7 @@
       "id": "P1-CFR-1.70015",
       "priority": 1,
       "order": 200,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70015 Quarterly reports 條文卡",
@@ -450,7 +450,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:42:24Z",
+          "summary": "適用market-power/affiliate主體、兩類報告、內容與每季後90日逐段；期限儀表板連結；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:41:20Z",
+      "completed_at": "2026-08-01T06:42:24Z"
     },
     {
       "id": "P1-CFR-1.70016",
