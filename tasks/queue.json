@@ -826,7 +826,7 @@
       "id": "P1-ICFS-MATRIX",
       "priority": 1,
       "order": 400,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "FILING_MATRIX",
       "title": "建立 ICFS 申請類型與附件矩陣",
@@ -852,7 +852,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T07:03:25Z",
+          "summary": "Seven-event ICFS matrix completed with separate cable-license and Section 214 columns, filing systems, forms, attachments, confidentiality, fees, public notice, streamlining, deadlines, source links, NORS/capacity routing; full-vault health PASS"
+        }
+      ],
+      "started_at": "2026-08-01T07:03:25Z",
+      "completed_at": "2026-08-01T07:03:25Z"
     },
     {
       "id": "P2-EQUIP-PFE",

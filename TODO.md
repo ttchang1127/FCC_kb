@@ -169,30 +169,30 @@ python3 scripts/update_regulatory_data.py --accept-current
 
 待建立的實質條文卡：
 
-- [ ] §1.70000 Purpose
-- [ ] §1.70002 General requirements
-- [ ] §1.70004 Additional presumptive disqualifying conditions
-- [ ] §1.70008 Special temporary authority
-- [ ] §1.70009 Foreign carrier affiliation
-- [ ] §1.70010 Amendment of applications
-- [ ] §1.70011 Modification applications
-- [ ] §1.70012 Substantial assignment／transfer of control
-- [ ] §1.70013 Pro forma assignment／transfer notifications
-- [ ] §1.70014 Processing of applications
-- [ ] §1.70015 Quarterly reports
-- [ ] §1.70016 Eligibility for streamlining
-- [ ] §1.70017 Foreign adversary annual report
-- [ ] §1.70020 Renewal and extension applications
-- [ ] §1.70021 Electronic filing
-- [ ] §1.70022 Revocation and termination
-- [ ] §1.70023 Covered List certification
-- [ ] §1.70024 One-time security certification
+- [x] §1.70000 Purpose
+- [x] §1.70002 General requirements
+- [x] §1.70004 Additional presumptive disqualifying conditions
+- [x] §1.70008 Special temporary authority
+- [x] §1.70009 Foreign carrier affiliation
+- [x] §1.70010 Amendment of applications
+- [x] §1.70011 Modification applications
+- [x] §1.70012 Substantial assignment／transfer of control
+- [x] §1.70013 Pro forma assignment／transfer notifications
+- [x] §1.70014 Processing of applications
+- [x] §1.70015 Quarterly reports
+- [x] §1.70016 Eligibility for streamlining
+- [x] §1.70017 Foreign adversary annual report
+- [x] §1.70020 Renewal and extension applications
+- [x] §1.70021 Electronic filing
+- [x] §1.70022 Revocation and termination
+- [x] §1.70023 Covered List certification
+- [x] §1.70024 One-time security certification
 
 狀態監測但不當成完整現行條文：
 
-- [ ] §1.70018 placeholder 狀態說明
-- [ ] §1.70019 Reserved 狀態說明
-- [ ] §§1.70025–1.70029 future placeholder／延後狀態說明
+- [x] §1.70018 placeholder 狀態說明
+- [x] §1.70019 Reserved 狀態說明
+- [x] §§1.70025–1.70029 future placeholder／延後狀態說明
 
 每張條文卡驗收標準：
 
@@ -204,14 +204,14 @@ python3 scripts/update_regulatory_data.py --accept-current
 
 ## 7. P1：周邊法源與程序
 
-- [ ] 建立 47 CFR §1.40001 Executive Branch review 卡。
-- [ ] 建立 47 CFR §63.18 International Section 214 卡。
-- [ ] 建立 Part 1 Subpart DD／§1.50002 Covered List 卡。
-- [ ] 建立 cable landing license 與 Section 214 authority 邊界比較。
-- [ ] 建立 ICFS 申請類型矩陣。
-- [ ] 建立初次申請、modification、assignment、transfer、renewal、STA、termination 流程。
-- [ ] 補上 Filing Manual、ICFS、NORS 與 capacity reporting 最新入口。
-- [ ] 建立申請附件、公開／機密資料及位置資訊處理矩陣。
+- [x] 建立 47 CFR §1.40001 Executive Branch review 卡。
+- [x] 建立 47 CFR §63.18 International Section 214 卡。
+- [x] 建立 Part 1 Subpart DD／§1.50002 Covered List 卡。
+- [x] 建立 cable landing license 與 Section 214 authority 邊界比較。
+- [x] 建立 ICFS 申請類型矩陣。
+- [x] 建立初次申請、modification、assignment、transfer、renewal、STA、termination 流程。
+- [x] 補上 Filing Manual、ICFS、NORS 與 capacity reporting 最新入口。
+- [x] 建立申請附件、公開／機密資料及位置資訊處理矩陣。
 
 驗收標準：從事件出發能找到正確 filing type、表單／系統、附件、期限及法源。
 
@@ -334,6 +334,6 @@ python3 99_資料治理/fcc_kb_health.py
 
 ## 15. 下一個工作階段建議
 
-優先執行：**FCC 26-42 逐 amendatory instruction 生效矩陣**。
+優先執行：**P2 Power Feed Equipment（PFE）設備卡**。
 
-原因：距離 2026-09-25 一般生效日最近，且目前最大的法律風險是把未來生效、延後及提案內容混入現行義務。完成後再依序補齊 Subpart FF 條文卡、§1.40001／§63.18 及 ICFS 流程矩陣。
+原因：P0、P1 已完成；下一個機器可讀任務為 `P2-EQUIP-PFE`。依序完成設備卡後，再處理公開網站的 35-section 官方全文索引與案例庫。
