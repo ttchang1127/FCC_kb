@@ -231,7 +231,7 @@
       "id": "P1-CFR-1.70009",
       "priority": 1,
       "order": 140,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70009 Foreign carrier affiliation 條文卡",
@@ -252,7 +252,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:37:14Z",
+          "summary": "事前45日與事後30日路徑分列；25%/10%/50%與14/45/10/20日均附 paragraph；連回歷史1.768；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:36:33Z",
+      "completed_at": "2026-08-01T06:37:14Z"
     },
     {
       "id": "P1-CFR-1.70010",
