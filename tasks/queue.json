@@ -331,7 +331,7 @@
       "id": "P1-CFR-1.70012",
       "priority": 1,
       "order": 170,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70012 Substantial assignment／transfer 條文卡",
@@ -351,7 +351,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:39:40Z",
+          "summary": "assignment/transfer roles and data separated；segment ownership, certifications, 30-day consummation notice cited；instruction 13 delayed isolated；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:39:06Z",
+      "completed_at": "2026-08-01T06:39:40Z"
     },
     {
       "id": "P1-CFR-1.70013",
