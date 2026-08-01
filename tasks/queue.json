@@ -562,7 +562,7 @@
       "id": "P1-CFR-1.70021",
       "priority": 1,
       "order": 240,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70021 Electronic filing 條文卡",
@@ -582,7 +582,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:46:00Z",
+          "summary": "ICFS electronic forms rule與Part4 outage exception分列；實質期限交回各section；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:45:32Z",
+      "completed_at": "2026-08-01T06:46:00Z"
     },
     {
       "id": "P1-CFR-1.70022",
