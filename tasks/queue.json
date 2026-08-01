@@ -529,7 +529,7 @@
       "id": "P1-CFR-1.70020",
       "priority": 1,
       "order": 230,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70020 Renewal and extension 條文卡",
@@ -549,7 +549,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:45:19Z",
+          "summary": "renewal/extension 分路、共同資料、expiration前6個月與timely+complete pending operation保護；instruction17延後隔離；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:44:46Z",
+      "completed_at": "2026-08-01T06:45:19Z"
     },
     {
       "id": "P1-CFR-1.70021",
