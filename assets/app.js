@@ -379,6 +379,104 @@ async function loadFcc26Matrix() {
   }
 }
 
+function safeExternalUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" ? url.href : "#";
+  } catch (error) {
+    return "#";
+  }
+}
+
+function evaSectionTemplate(section) {
+  const paragraphs = Array.isArray(section.paragraphs)
+    ? section.paragraphs.map(paragraph => "<p>" + escapeHtml(paragraph) + "</p>").join("")
+    : "";
+  const bullets = Array.isArray(section.bullets) && section.bullets.length
+    ? "<ul>" + section.bullets.map(item => "<li>" + escapeHtml(item) + "</li>").join("") + "</ul>"
+    : "";
+  return '<section class="eva-response-block"><h4>' + escapeHtml(section.heading) + "</h4>" + paragraphs + bullets + "</section>";
+}
+
+function evaRiskMatrixTemplate(rows) {
+  if (!Array.isArray(rows) || !rows.length) return "";
+  return [
+    '<div class="eva-risk-wrap"><h4>跨法域風險矩陣</h4><div class="eva-risk-scroll"><table class="eva-risk-table">',
+    "<thead><tr><th>法域</th><th>主要風險</th><th>可能影響</th><th>初評</th></tr></thead><tbody>",
+    rows.map(row => [
+      "<tr><td>", escapeHtml(row.jurisdiction), "</td><td>", escapeHtml(row.risk),
+      "</td><td>", escapeHtml(row.impact), '</td><td><span data-level="', escapeHtml(row.level), '">',
+      escapeHtml(row.level), "</span></td></tr>"
+    ].join("")).join(""),
+    "</tbody></table></div></div>"
+  ].join("");
+}
+
+function evaQuestionTemplate(question) {
+  const tags = question.topics.map(topic => "<span>" + escapeHtml(topic) + "</span>").join("");
+  const sections = question.sections.map(evaSectionTemplate).join("");
+  const sources = question.sources.map(source => {
+    const href = safeExternalUrl(source.url);
+    return '<a href="' + escapeHtml(href) + '" target="_blank" rel="noreferrer">' + escapeHtml(source.label) + " ↗</a>";
+  }).join("");
+  return [
+    '<article class="eva-question-card" id="', escapeHtml(question.id), '">',
+    '<div class="eva-question-meta"><span>', escapeHtml(question.id), "</span><span>", escapeHtml(question.review_status), "</span></div>",
+    '<p class="eva-author">', escapeHtml(question.author.toLocaleUpperCase("en")), " 提問</p>",
+    "<h3>", escapeHtml(question.question), "</h3>",
+    '<div class="eva-topic-tags">', tags, "</div>",
+    '<div class="eva-answer"><strong>回應摘要</strong><p>', escapeHtml(question.summary), "</p></div>",
+    '<div class="eva-response-grid">', sections, "</div>",
+    evaRiskMatrixTemplate(question.risk_matrix),
+    '<div class="eva-sources"><strong>查核來源</strong><div>', sources, "</div></div></article>"
+  ].join("");
+}
+
+function isValidEvaFeed(feed) {
+  return feed && feed.schema_version === 1 && Array.isArray(feed.questions) && feed.questions.every(question => (
+    typeof question.id === "string" &&
+    typeof question.date === "string" &&
+    typeof question.author === "string" &&
+    typeof question.question === "string" &&
+    typeof question.summary === "string" &&
+    Array.isArray(question.topics) &&
+    Array.isArray(question.sections) &&
+    Array.isArray(question.sources)
+  ));
+}
+
+function renderEvaQuestions(feed) {
+  const questions = [...feed.questions].sort((a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id));
+  const grouped = questions.reduce((groups, question) => {
+    if (!groups.has(question.date)) groups.set(question.date, []);
+    groups.get(question.date).push(question);
+    return groups;
+  }, new Map());
+  const timeline = document.querySelector("#eva-question-list");
+  timeline.innerHTML = [...grouped.entries()].map(([date, items]) => [
+    '<div class="eva-date-marker"><time datetime="', escapeHtml(date), '">', escapeHtml(compactDate(date)),
+    "</time><span>", items.length, items.length === 1 ? " QUESTION" : " QUESTIONS", "</span></div>",
+    items.map(evaQuestionTemplate).join("")
+  ].join("")).join("");
+  timeline.dataset.state = "loaded";
+  document.querySelector("#eva-question-count").textContent = String(questions.length).padStart(2, "0");
+  document.querySelector("#eva-load-status").textContent = "公開資料已載入・更新日 " + compactDate(feed.last_updated);
+}
+
+async function loadEvaQuestions() {
+  try {
+    const response = await fetch("data/eva-questions.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("HTTP " + response.status);
+    const feed = await response.json();
+    if (!isValidEvaFeed(feed)) throw new Error("Invalid Eva questions schema");
+    renderEvaQuestions(feed);
+  } catch (error) {
+    document.querySelector("#eva-question-list").dataset.state = "fallback";
+    document.querySelector("#eva-load-status").textContent = "完整資料暫時無法載入・目前顯示安全摘要";
+    console.warn("Eva questions feed unavailable:", error);
+  }
+}
+
 function citedSection(item) {
   const match = item.citation.match(/§(\d+\.\d+)/);
   return match ? match[1] : null;
@@ -545,4 +643,5 @@ document.addEventListener("keydown", event => {
 renderDeadlines();
 renderCards();
 loadFcc26Matrix();
+loadEvaQuestions();
 loadRegulatoryStatus();

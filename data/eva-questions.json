@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-08-01",
+  "collection_title": "Eva 問題集",
+  "description": "將 LINE 群組中的海纜法規提問整理為可追溯的公開主題回應。",
+  "questions": [
+    {
+      "id": "EVA-20260801-001",
+      "date": "2026-08-01",
+      "author": "Eva Chang",
+      "question": "分析在 FCC 對於中國業者的限制下，現行中華電信已完工與未完工所參與投資的海纜之影響。",
+      "topics": ["FCC", "中國業者", "中華電信", "投資風險"],
+      "review_status": "初步分析完成・需個案文件複核",
+      "summary": "FCC 現行規則不會只因既有海纜有中國業者參與，就自動使中華電信的投資違法或強制退出。風險會在新申請、重大修改、續期、控制權移轉、增設美國登陸點，或成員涉及外國敵對國控制、Covered List 與不利 FCC 授權紀錄時明顯升高。",
+      "sections": [
+        {
+          "heading": "已完工海纜",
+          "paragraphs": [
+            "既有許可通常不會僅因 consortium 中存在中國業者而自動失效；但 license conditions、國安協議、持續認證、通報及執法監督仍然存在。",
+            "TPE、NCP 等美國登陸系統應優先核對原始 FCC grant、後續修改、Team Telecom／國安條件、當前成員及實際控制權。"
+          ]
+        },
+        {
+          "heading": "未完工或準備變更的海纜",
+          "paragraphs": [
+            "新申請、修改、續期、移轉及新增容量控制安排會重新暴露於外國所有權、Covered List、資安、實體安全及 Executive Branch review。",
+            "監管處置可能包括 consortium 重組、限制特定業者接觸 SLTE／NOC／網管、替換設備或供應商，以及延長審查期；結果仍須依個案申請與未公開條件判斷。"
+          ]
+        },
+        {
+          "heading": "中華電信系統初步分組",
+          "paragraphs": [
+            "TPE、NCP：已有美國登陸且歷史成員包含中國電信業者，修改、移轉與續期為主要風險節點。SJC2：未直接登陸美國，FCC 對纜系本身直接管轄較低，但與美國系統、IRU、SLTE 或網管形成控制鏈時仍須評估。",
+            "Apricot、E2A：即使公開資料未見中國 consortium 成員，仍須符合 Subpart FF 與國安審查。AUG East：直接 FCC 風險較低，主要風險轉向沿線國家許可與地緣政治。"
+          ]
+        },
+        {
+          "heading": "建議處理",
+          "bullets": [
+            "逐纜收集 FCC file number、grant、到期日及全部修改／移轉紀錄。",
+            "核對 consortium 成員、最終受益人、關係企業、Covered List 與容量控制權。",
+            "盤點 Team Telecom／國安協議，以及 SLTE、NOC、網管、遠端維運與加密金鑰控制。",
+            "在新 consortium agreement 納入受限制成員退出、替換與成本分攤條款。"
+          ]
+        }
+      ],
+      "sources": [
+        {"label": "47 CFR Part 1, Subpart FF", "url": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-FF"},
+        {"label": "FCC Submarine Cable Landing Licenses", "url": "https://www.fcc.gov/research-reports/guides/submarine-cable-landing-licenses"},
+        {"label": "FCC NCP grant, DA 17-55", "url": "https://docs.fcc.gov/public/attachments/DA-17-55A1.pdf"},
+        {"label": "中華電信 SJC2 商轉公告", "url": "https://www.cht.com.tw/en/home/cht/messages/2025/0718-1400"}
+      ]
+    },
+    {
+      "id": "EVA-20260801-002",
+      "date": "2026-08-01",
+      "author": "Eva Chang",
+      "question": "列出中華電信連外海纜在其他國家存在的相似地緣政治法規風險，包含影響海纜路由設計及投資金額等風險，例如印尼麻六甲海峽登陸政策、南海許可管轄模式。",
+      "topics": ["印尼", "南海", "路由設計", "跨國許可"],
+      "review_status": "初步跨國盤點完成・需當地律師複核",
+      "summary": "其他法域不一定像 FCC 直接限制特定國籍業者；更常透過海域管轄、指定走廊、登陸站、當地持照者、外國工作船、國安審查與維修入境許可，實質改變海纜路由、工期及投資額。",
+      "sections": [
+        {
+          "heading": "印尼與麻六甲海峽周邊",
+          "paragraphs": [
+            "印尼的海纜走廊、登陸站及當地營運架構，可能迫使系統調整路由、集中登陸，或增加陸上 backhaul。對 AUG East 等在印尼登陸的系統，這是前期設計閘門。",
+            "預算應另列 route survey／re-survey、CLS／duct、當地合作、多機關許可與 cable ship standby；舊規的投資或 consortium 門檻不得直接沿用，須依最新申請實務確認。"
+          ]
+        },
+        {
+          "heading": "南海與中國許可",
+          "paragraphs": [
+            "UNCLOS 提供公海與大陸礁層鋪纜的基本框架，但進入領土、領海及沿岸設施仍可被設定條件。南海重疊主張使 route survey、鋪設、維修與外國 cable ship 可能面臨不同或多重核准。",
+            "實際成本會反映在避讓造成的纜長、repeater／供電設計、船期等待，以及故障後因 repair approval 延誤而增加的中斷時間。"
+          ]
+        },
+        {
+          "heading": "其他沿線法域",
+          "bullets": [
+            "越南：設置執照、跨部會審查、文件驗證、工作船入境與活動費率，投資前應取得合併後最新法規。",
+            "新加坡：FBO licence、海事走廊、土地／開發與 wayleave 多機關核准，瓶頸常在走廊和登陸土地。",
+            "澳洲：ACMA 海纜許可、保護區、licensed carrier 與州／領地沿岸規則會共同影響路由和 critical path。",
+            "馬來西亞、菲律賓：持照、海事通知、外國工作船與海關程序需逐案確認；菲律賓 2026 年改革降低部分船舶臨時入境摩擦，但不取代其他許可。"
+          ]
+        },
+        {
+          "heading": "投資估算方式",
+          "paragraphs": [
+            "風險調整後投資額應拆成：基礎海工 CAPEX、增加纜長／repeater／供電、CLS／duct／backhaul、survey／EIA、許可與當地合作、工作船 standby、國安設備替換、融資延誤、維修入境費與準備金。沒有報價或官方費率的欄位標示 TBD，不以臆測百分比代替。"
+          ]
+        }
+      ],
+      "risk_matrix": [
+        {"jurisdiction": "印尼", "risk": "指定走廊、登陸站與當地營運架構", "impact": "路由／登陸／backhaul／重測", "level": "高"},
+        {"jurisdiction": "南海／中國", "risk": "重疊管轄及調查、鋪設、維修、外國船許可", "impact": "繞行／船期／修復延誤", "level": "高"},
+        {"jurisdiction": "越南", "risk": "設置執照、跨部會審查、工作船及費率", "impact": "前置成本／文件／維修成本", "level": "高"},
+        {"jurisdiction": "新加坡／澳洲", "risk": "走廊、土地、carrier licence 與沿岸許可", "impact": "選線／多機關時程／申請費", "level": "中至高"},
+        {"jurisdiction": "馬來西亞／菲律賓", "risk": "持照、海事、船舶與海關程序", "impact": "當地代理／船期／通關", "level": "中"}
+      ],
+      "sources": [
+        {"label": "印尼 Decree No. 14/2021", "url": "https://jdih.kkp.go.id/Homedev/DetailPeraturan/3006"},
+        {"label": "印尼 Regulation No. 15/2025", "url": "https://jdih.komdigi.go.id/produk_hukum/unduh/id/985/t/peraturan+menteri+komunikasi+dan+digital+nomor+15+tahun+2025"},
+        {"label": "UNCLOS 官方全文", "url": "https://static.un.org/Depts/los/convention_agreements/texts/unclos/unclos_e.pdf"},
+        {"label": "新加坡海纜部署指引", "url": "https://www.imda.gov.sg/-/media/Imda/Files/Regulation-Licensing-and-Consultations/Codes-of-Practice-and-Guidelines/SubCableLanding.pdf"},
+        {"label": "澳洲 ACMA 海纜許可", "url": "https://www.acma.gov.au/apply-install-submarine-cable"},
+        {"label": "越南 Decree 163/2024/NĐ-CP", "url": "https://vanban.chinhphu.vn/?classid=1&docid=212144&pageid=27160"}
+      ]
+    }
+  ]
+}
