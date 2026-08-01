@@ -33,7 +33,7 @@ jobs:
 
       - name: Read human-review state
         id: review
-        run: echo "required=$(jq -r '.review.status == \"review_required\"' data/regulatory-status.json)" >> "$GITHUB_OUTPUT"
+        run: echo "required=$(jq -r '.review.status == "review_required"' data/regulatory-status.json)" >> "$GITHUB_OUTPUT"
 
       - name: Commit source status when changed
         run: |
