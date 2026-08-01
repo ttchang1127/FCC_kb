@@ -4,6 +4,18 @@
 
 後續工作、跨電腦啟動方式及驗收標準請先讀 [`TODO.md`](TODO.md)。
 
+## AI／代理接手
+
+不論使用 Codex、Gemini 或其他模型，第一步固定執行：
+
+```sh
+python3 scripts/agent_preflight.py
+python3 scripts/taskctl.py validate
+python3 scripts/taskctl.py next --mode auto
+```
+
+代理必須依序閱讀 [`AGENTS.md`](AGENTS.md)、[`TODO.md`](TODO.md)、[`docs/AI_RUNBOOK.md`](docs/AI_RUNBOOK.md) 與 [`docs/LEGAL_STATUS_DECISION_TABLE.md`](docs/LEGAL_STATUS_DECISION_TABLE.md)。Gemini 另有自動入口 [`GEMINI.md`](GEMINI.md)。機器可讀任務與依賴位於 [`tasks/queue.json`](tasks/queue.json)。
+
 - 法規資料截至：2026-07-30（eCFR Title 47）
 - 人工查核日期：2026-08-01
 - 網站：啟用 GitHub Pages 後可由 `https://ttchang1127.github.io/FCC_kb/` 瀏覽

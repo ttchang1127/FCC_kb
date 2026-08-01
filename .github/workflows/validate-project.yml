@@ -1,0 +1,24 @@
+name: Validate FCC_kb handoff and public files
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run deterministic project verification
+        run: python3 scripts/verify_project.py
+
+      - name: Show remaining public queue
+        run: python3 scripts/taskctl.py list --mode public --status ready

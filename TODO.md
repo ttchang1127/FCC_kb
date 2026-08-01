@@ -3,6 +3,20 @@
 > 最後人工更新：2026-08-01（Asia/Taipei）<br>
 > 使用方式：每次開始工作先讀本檔，再查看 `data/regulatory-status.json` 與 GitHub Actions 最新執行結果；完成工作後同步更新本檔並推送。
 
+> AI 注意：本檔是人類可讀 roadmap；真正的任務順序、依賴與狀態以 `tasks/queue.json` 為準。不得直接從本頁任選 checkbox。
+
+## 0. 無腦接手指令
+
+任何 AI 模型先執行：
+
+```bash
+python3 scripts/agent_preflight.py
+python3 scripts/taskctl.py validate
+python3 scripts/taskctl.py next --mode auto
+```
+
+只做 `next` 顯示的一個 task。完整規則見 `AGENTS.md`；Gemini 先讀 `GEMINI.md`；逐步配方見 `docs/AI_RUNBOOK.md`。
+
 ## 1. 專案目標
 
 建立可追溯、可區分法律狀態且能自動監測官方來源的 FCC 海底電纜規範知識庫，涵蓋：
@@ -28,6 +42,7 @@
 | eCFR 監測範圍 | ✅ 35 sections | 目前 28 個有現行文字；其餘為 reserved／future placeholder |
 | Federal Register 監測 | ✅ 已啟用 | 搜尋 FCC 海纜直接相關文件 |
 | 變更偵測 | ✅ 已啟用 | SHA-256 對照人工審核基準 |
+| AI 機械化交接 | ✅ 已啟用 | 35 個任務、依賴、recipes、preflight 與驗證工具 |
 | 中文整理卡 | 🟡 部分完成 | 網站 13 張公開卡；Obsidian 28 個 Markdown |
 | 結構健檢 | ✅ 通過 | 重複 ID、YAML 錯誤、缺欄位、壞連結均為 0 |
 
@@ -310,6 +325,12 @@ python3 99_資料治理/fcc_kb_health.py
 | `data/regulatory-status.json` | 最新自動來源資料 |
 | `data/review-baseline.json` | 人工審核基準 |
 | `.github/workflows/update-regulations.yml` | 每日自動更新排程 |
+| `AGENTS.md` | 所有 AI 的強制工作規則 |
+| `GEMINI.md` | Gemini 的最小啟動入口 |
+| `tasks/queue.json` | 機器可讀任務順序、依賴及驗收 |
+| `scripts/agent_preflight.py` | 環境、Git、來源及下一任務檢查 |
+| `scripts/taskctl.py` | 任務查詢、開始、完成及阻擋控制 |
+| `scripts/verify_project.py` | 公開邊界、資料 schema 與程式驗證 |
 
 ## 15. 下一個工作階段建議
 
