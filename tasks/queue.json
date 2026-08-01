@@ -298,7 +298,7 @@
       "id": "P1-CFR-1.70011",
       "priority": 1,
       "order": 160,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70011 Modification applications 條文卡",
@@ -318,7 +318,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:38:49Z",
+          "summary": "九種 modification/application/notification 路徑與資料分列；30/90/60日期逐段；instruction 12 延後隔離；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:38:06Z",
+      "completed_at": "2026-08-01T06:38:49Z"
     },
     {
       "id": "P1-CFR-1.70012",
