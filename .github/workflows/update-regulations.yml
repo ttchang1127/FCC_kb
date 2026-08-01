@@ -5,6 +5,12 @@ on:
     # Daily at 04:23 Asia/Taipei (20:23 UTC). Off-hour scheduling reduces delay.
     - cron: "23 20 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/update-regulations.yml"
+      - "scripts/update_regulatory_data.py"
+      - "data/review-baseline.json"
 
 permissions:
   contents: write
