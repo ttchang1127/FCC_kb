@@ -24,22 +24,27 @@ const LOCK_FILE = path.join(LINE_ROOT, "_fcc-eva-web-update.lock");
 const LEGACY_LOCK_FILE = path.join(LINE_ROOT, "_fcc-processor.lock");
 const CODEX_BIN = process.env.CODEX_BIN || "/opt/homebrew/bin/codex";
 const PUBLIC_FILE = "data/eva-questions.json";
+const AUDIT_FILE = path.join(REPO, "99_資料治理", "Eva_LINE排程執行紀錄.md");
+const LAUNCHD_SERVICE = "tw.jarvis.fcc-eva-web-update";
 const DRY_RUN = process.argv.includes("--dry-run");
 const INITIALIZE = process.argv.includes("--initialize");
 const SELF_TEST = process.argv.includes("--self-test");
 const PIPELINE_TEST = process.argv.includes("--pipeline-self-test");
+const NORMAL_RUN = !DRY_RUN && !INITIALIZE && !SELF_TEST && !PIPELINE_TEST;
 const MAX_MESSAGE_LENGTH = 6000;
 const MAX_RUN_MS = 55 * 60 * 1000;
+const RUN_STARTED_AT = new Date();
 
 let worktree = "";
 let tempRoot = "";
 let branch = "";
 let ownLock = false;
 let ownLegacyLock = false;
+let auditContext = null;
+let auditWritten = false;
 
-function log(message) {
-  const stamp = new Date().toISOString();
-  process.stdout.write(`[${stamp}] ${message}\n`);
+function log(message, date = new Date()) {
+  process.stdout.write(`[${date.toISOString()}] ${message}\n`);
 }
 
 function fail(message) {
@@ -135,6 +140,62 @@ function readWatermark() {
 
 function writeWatermark(value) {
   fs.writeFileSync(STATE_FILE, `${value}\n`, { mode: 0o600 });
+}
+
+function taipeiTimestamp(date) {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Taipei",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hourCycle: "h23",
+  }).formatToParts(date).filter(part => part.type !== "literal").map(part => [part.type, part.value]));
+  return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second} UTC+8`;
+}
+
+function taipeiDate(date) {
+  return taipeiTimestamp(date).slice(0, 10);
+}
+
+function appendAuditRecord({ result, totalCount, pendingCount, publishedCount = 0 }) {
+  const trigger = process.env.XPC_SERVICE_NAME === LAUNCHD_SERVICE ? "launchd" : "manual";
+  const updated = taipeiDate(RUN_STARTED_AT);
+  const auditLoggedAt = new Date();
+  const row = `| ${taipeiTimestamp(RUN_STARTED_AT)} | ${auditLoggedAt.toISOString()} | ${trigger} | ${result} | ${totalCount} | ${pendingCount} | ${publishedCount} |`;
+  let text;
+  if (fs.existsSync(AUDIT_FILE)) {
+    text = fs.readFileSync(AUDIT_FILE, "utf8");
+    text = text.replace(/^updated: .*$/m, `updated: ${updated}`);
+    if (!text.endsWith("\n")) text += "\n";
+    text += `${row}\n`;
+  } else {
+    fs.mkdirSync(path.dirname(AUDIT_FILE), { recursive: true });
+    text = [
+      "---",
+      "id: Eva_LINE排程執行紀錄",
+      "type: 資料治理",
+      "title: Eva LINE 問題集排程執行紀錄",
+      "created: 2026-08-02",
+      `updated: ${updated}`,
+      "tags: [FCC, Eva問題集, launchd, 自動化, 稽核]",
+      "---",
+      "",
+      "# Eva LINE 問題集排程執行紀錄",
+      "",
+      "> 僅保存執行狀態與數量，不保存 LINE user ID、group ID、token、訊息原文或其他私人識別資料。",
+      "",
+      "| 台北執行時間 | UTC 日誌時間 | 觸發方式 | 結果 | Eva 訊息總數 | 待處理數 | 發布數 |",
+      "|---|---|---|---|---:|---:|---:|",
+      row,
+      "",
+    ].join("\n");
+  }
+  fs.writeFileSync(AUDIT_FILE, text, "utf8");
+  auditWritten = true;
+  log(`已寫入 Eva 排程執行紀錄：${result}，待處理 ${pendingCount}`, auditLoggedAt);
 }
 
 function quarantineInvalidCodexRefs() {
@@ -250,6 +311,7 @@ function main() {
   const { messages, privateIdentifiers } = loadEvaMessages(config);
   const watermark = readWatermark();
   const pending = messages.filter(message => !watermark || message.ts > watermark);
+  auditContext = { totalCount: messages.length, pendingCount: pending.length };
 
   if (SELF_TEST) {
     run(CODEX_BIN, ["login", "status"]);
@@ -281,12 +343,17 @@ function main() {
     log("PIPELINE SELF-TEST PASS：隔離 worktree、公開 JSON、驗證與清理流程可用");
     return;
   }
+  acquireLocks();
   if (!pending.length) {
+    appendAuditRecord({
+      result: "no_new_questions",
+      totalCount: messages.length,
+      pendingCount: 0,
+    });
     log("沒有新的 Eva Chang 提問");
     return;
   }
 
-  acquireLocks();
   const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d{3}Z$/, "Z");
   branch = `fcc-eva-auto/${stamp}-${process.pid}`;
   tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "fcc-eva-auto-"));
@@ -321,6 +388,11 @@ function main() {
 
   if (!files.length) {
     writeWatermark(pending.at(-1).ts);
+    appendAuditRecord({
+      result: "already_present",
+      totalCount: messages.length,
+      pendingCount: pending.length,
+    });
     log("新提問已存在於公開資料；未建立重複內容，游標已前進");
     return;
   }
@@ -337,6 +409,12 @@ function main() {
   ]);
   git(worktree, ["push", "origin", "HEAD:main"], { timeout: 180000 });
   writeWatermark(pending.at(-1).ts);
+  appendAuditRecord({
+    result: "published",
+    totalCount: messages.length,
+    pendingCount: pending.length,
+    publishedCount: pending.length,
+  });
   log(`已發布 ${pending.length} 則提問至 origin/main`);
 
   try {
@@ -352,6 +430,13 @@ function main() {
 try {
   main();
 } catch (error) {
+  if (NORMAL_RUN && auditContext && !auditWritten) {
+    try {
+      appendAuditRecord({ result: "failed", ...auditContext });
+    } catch (auditError) {
+      process.stderr.write(`[audit-fatal] ${auditError.stack || auditError.message}\n`);
+    }
+  }
   process.stderr.write(`[fatal] ${error.stack || error.message}\n`);
   process.exitCode = 1;
 } finally {

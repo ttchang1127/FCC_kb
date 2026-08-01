@@ -8,6 +8,7 @@
 LINE ingest 日誌
   → 以私人授權清單的 LINE user ID 篩選 Eva Chang
   → 讀取尚未處理的文字訊息
+  → 在完整 vault 寫入觸發時間、結果與待處理數
   → 建立獨立 Git worktree
   → codex exec 在 workspace-write sandbox 研究並更新 JSON
   → 驗證公開資料與允許修改的檔案
@@ -27,11 +28,13 @@ VS Code 不必開啟。VS Code 是編輯與人工檢查介面；排程器是 `la
 - 外層程式再次檢查 changed files、JSON schema、問題原文、官方來源 URL、私人識別碼及專案驗證。
 - 驗證失敗、Git push 失敗或來源不足時，不更新處理游標；下一次排程會重試。
 - 公開 repository 不保存 LINE user ID、group ID、token、Codex auth 或 SSH key。
+- 每次正常執行都更新 `99_資料治理/Eva_LINE排程執行紀錄.md`；即使待處理數為 0 也寫入 `no_new_questions`。測試與 dry-run 不寫正式紀錄。
+- 稽核表只保存台北時間、UTC 日誌時間、觸發方式、結果與數量；不保存 LINE 識別碼或訊息原文。該檔位於被 `.gitignore` 排除的完整 vault，不會公開或觸發每日 Git push。
 - 外接磁碟若在 `.git/refs/codex/` 產生名稱為 `Icon` 加控制字元的無效暫存 ref，發布器會精確移至 repo 同層的 `.fcc-kb-invalid-git-refs/` 可復原隔離區，避免背景 `git fetch` 中斷；不移動一般 branch、tag 或 remote ref。
 
-## 本機檔案
+## 本機私有檔案
 
-以下皆位於 Git repository 之外，不會推送：
+以下檔案不會推送；前六項位於 Git repository 之外，最後一項位於完整 FCC_kb vault 且受 `.gitignore` 排除：
 
 ```text
 ~/.openclaw/workspace/line-logs/_fcc-config.json
@@ -40,6 +43,7 @@ VS Code 不必開啟。VS Code 是編輯與人工檢查介面；排程器是 `la
 ~/Library/LaunchAgents/tw.jarvis.fcc-eva-web-update.plist
 ~/.openclaw/logs/fcc-eva-web-update.stdout.log
 ~/.openclaw/logs/fcc-eva-web-update.stderr.log
+<FCC_kb>/99_資料治理/Eva_LINE排程執行紀錄.md
 ```
 
 ## 操作指令

@@ -1021,7 +1021,7 @@
       "id": "P1-AUTO-EVA-AUDIT",
       "priority": 1,
       "order": 494,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "WEB_FEATURE",
       "title": "保存每日 Eva LINE 排程執行紀錄",
@@ -1046,7 +1046,14 @@
         "launchd 實跑與 full-vault 驗證通過"
       ],
       "human_review_required": false,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T22:08:23Z",
+          "summary": "建立完整 vault 稽核表；補登 2026-08-02 05:00:04 launchd/no_new_questions/pending=0；launchd 實跑新增 06:06:57 pending=0 且 exit 0；dry-run/self-test/pipeline-self-test 前後 hash 相同；不含私人識別資料；verify_project.py --full-vault 與 health PASS"
+        }
+      ],
+      "started_at": "2026-08-01T22:05:22Z",
+      "completed_at": "2026-08-01T22:08:23Z"
     },
     {
       "id": "P2-EQUIP-PFE",
