@@ -1,0 +1,20 @@
+.DS_Store
+Icon
+Icon?
+._*
+*.bak
+__pycache__/
+.obsidian/
+
+# Private/local Obsidian knowledge base. The public repository contains only
+# the static website and its curated public data.
+00_首頁/
+01_規範總覽/
+02_法源與原文索引/
+03_主題整合/
+04_合規流程映射/
+05_跨版本與法律狀態比較/
+06_案例命令與許可/
+07_申報通報與期限/
+08_設備與系統卡/
+99_資料治理/

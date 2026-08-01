@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FCC 海纜登陸許可、47 CFR、SLTE、outage 通報與容量申報的繁體中文知識庫。">
+  <meta name="theme-color" content="#071a22">
+  <title>FCC 海纜規範知識庫</title>
+  <link rel="preconnect" href="https://www.ecfr.gov">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="FCC 海纜規範知識庫首頁">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span>
+        <strong>FCC 海纜規範</strong>
+        <small>Regulatory Knowledge Base</small>
+      </span>
+    </a>
+    <nav class="header-nav" aria-label="主要導覽">
+      <a href="#regulations">規範索引</a>
+      <a href="#deadlines">期限</a>
+      <a href="#transition">版本轉換</a>
+      <a href="#sources">來源</a>
+    </nav>
+    <a class="official-button" href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-FF" target="_blank" rel="noreferrer">查閱 eCFR <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> U.S. SUBMARINE CABLE COMPLIANCE</p>
+        <h1>讓複雜的海纜規範，<br><em>變成可執行的路徑。</em></h1>
+        <p class="hero-lead">涵蓋 47 CFR Part 1 Subpart FF、歷史 §§1.767／1.768、SLTE、海纜中斷通報及年度容量申報。每一張卡片都標示法律狀態，避免把未生效修正當成現行義務。</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#regulations">開始查找規範 <span aria-hidden="true">↓</span></a>
+          <button class="text-action" type="button" data-open-status>查看版本狀態 <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+      <aside class="status-console" aria-label="資料新鮮度與法律狀態">
+        <div class="console-head">
+          <span>LIVE REGULATORY STATUS</span>
+          <span class="pulse-dot">VERIFIED</span>
+        </div>
+        <div class="date-lockup">
+          <span>eCFR DATA</span>
+          <strong>2026.07.30</strong>
+          <small>人工查核 2026.08.01 · UTC+8</small>
+        </div>
+        <div class="console-row">
+          <span class="status-dot effective"></span>
+          <div><strong>Subpart FF</strong><small>現行核心規則</small></div>
+          <span class="state-label">有效</span>
+        </div>
+        <div class="console-row">
+          <span class="status-dot future"></span>
+          <div><strong>FCC 26-42</strong><small>一般規則 2026.09.25</small></div>
+          <span class="state-label amber">混合</span>
+        </div>
+        <div class="console-row">
+          <span class="status-dot history"></span>
+          <div><strong>§§1.767 / 1.768</strong><small>2026.07.08 移除</small></div>
+          <span class="state-label gray">歷史</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="alert-band" aria-label="重要法律狀態提醒">
+      <div class="alert-icon" aria-hidden="true">!</div>
+      <p><strong>版本警示</strong>　§§1.767、1.768 已由 Subpart FF 取代；FCC 26-42 雖已發布，但截至查核日仍有多項修正無限期延後。</p>
+      <a href="#transition">查看對照</a>
+    </section>
+
+    <section class="stat-strip" aria-label="知識庫摘要">
+      <div><strong>47</strong><span>CFR Title</span></div>
+      <div><strong>25</strong><span>Subpart FF sections</span></div>
+      <div><strong>4h</strong><span>Outage notification</span></div>
+      <div><strong>03.31</strong><span>Annual capacity report</span></div>
+    </section>
+
+    <section class="content-section regulations" id="regulations">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">REGULATORY INDEX</p>
+          <h2>依任務找到正確條文</h2>
+          <p>搜尋條號、設備或義務；再依主題與法律狀態縮小結果。</p>
+        </div>
+        <div class="results-meta" aria-live="polite"><strong id="result-count">0</strong><span>筆規範</span></div>
+      </div>
+
+      <div class="search-panel">
+        <label class="search-box" for="search-input">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="搜尋：1.70005、SLTE、outage、資安…" autocomplete="off">
+          <kbd>⌘ K</kbd>
+        </label>
+        <div class="filter-row">
+          <div class="filter-group" aria-label="主題篩選">
+            <button class="filter active" type="button" data-filter="topic" data-value="all">全部</button>
+            <button class="filter" type="button" data-filter="topic" data-value="license">許可</button>
+            <button class="filter" type="button" data-filter="topic" data-value="equipment">設備</button>
+            <button class="filter" type="button" data-filter="topic" data-value="security">安全</button>
+            <button class="filter" type="button" data-filter="topic" data-value="reporting">申報</button>
+            <button class="filter" type="button" data-filter="topic" data-value="history">歷史</button>
+          </div>
+          <label class="status-select-label" for="status-filter">法律狀態
+            <select id="status-filter">
+              <option value="all">全部狀態</option>
+              <option value="effective">現行有效</option>
+              <option value="future">未來／混合</option>
+              <option value="historical">歷史規範</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="card-grid" id="regulation-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <strong>找不到相符規範</strong>
+        <p>試著搜尋較短的條號，或清除目前篩選。</p>
+        <button type="button" id="clear-filters">清除篩選</button>
+      </div>
+    </section>
+
+    <section class="content-section deadline-section" id="deadlines">
+      <div class="section-heading inverse">
+        <div>
+          <p class="section-kicker">COMPLIANCE CLOCK</p>
+          <h2>不能錯過的期限</h2>
+          <p>快速辨識觸發事件、現行期限與法源。正式申報前仍應回查表單及個別許可條件。</p>
+        </div>
+        <span class="as-of">AS OF 2026.08.01</span>
+      </div>
+      <div class="deadline-layout">
+        <div class="deadline-feature">
+          <p>最快通報時限</p>
+          <strong>4<small>小時</small></strong>
+          <span>判定為 reportable outage 後</span>
+          <a href="https://www.ecfr.gov/current/title-47/section-4.15" target="_blank" rel="noreferrer">47 CFR §4.15(b)(2)(ii) ↗</a>
+        </div>
+        <div class="deadline-table-wrap">
+          <table>
+            <thead><tr><th>觸發事件／義務</th><th>期限</th><th>依據</th></tr></thead>
+            <tbody id="deadline-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section transition-section" id="transition">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">VERSION TRANSITION</p>
+          <h2>舊條號沒有消失，<br>但用途已經改變。</h2>
+        </div>
+        <p class="heading-note">舊 FCC Guide、license grant 或表單仍可能引用 §1.767／§1.768。保留歷史引用與適用日期，再連到現行 Subpart FF；不要靜默改號。</p>
+      </div>
+
+      <div class="transition-map">
+        <article class="era-card old">
+          <div class="era-label">THROUGH 2026.07.07</div>
+          <span class="era-status">歷史規範</span>
+          <h3>§1.767 <small>Cable landing licenses</small></h3>
+          <h3>§1.768 <small>Foreign carrier affiliation</small></h3>
+          <p>最後有效版本保留供案件與舊文件追溯。</p>
+        </article>
+        <div class="transition-arrow" aria-label="由舊制轉換為新制"><span>2026.07.08</span><i>→</i></div>
+        <article class="era-card current">
+          <div class="era-label">CURRENT CORE RULES</div>
+          <span class="era-status">現行有效</span>
+          <h3>Part 1 <small>Subpart FF</small></h3>
+          <p>§§1.70000–1.70024 將申請、認證、例行條件、變更、移轉、續照與終止拆分管理。</p>
+          <a href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-FF" target="_blank" rel="noreferrer">開啟現行 Subpart FF ↗</a>
+        </article>
+      </div>
+
+      <div class="mapping-table-wrap">
+        <table class="mapping-table">
+          <thead><tr><th>舊制功能</th><th>現行主要位置</th><th>工作重點</th></tr></thead>
+          <tbody>
+            <tr><td>適用範圍與定義</td><td>§§1.70000–1.70002</td><td>包含 SLTE 的系統邊界</td></tr>
+            <tr><td>申請人／licensee</td><td>§1.70003</td><td>控制 landing station 或符合 5% 門檻</td></tr>
+            <tr><td>初次申請</td><td>§1.70005</td><td>系統、位置、SLTE／PFE、控制關係</td></tr>
+            <tr><td>認證與例行條件</td><td>§§1.70006–1.70007</td><td>資安、實體安全、Covered List、通知</td></tr>
+            <tr><td>外國業者關聯</td><td>§1.70009</td><td>通知或事前核准</td></tr>
+            <tr><td>變更、移轉、續照</td><td>§§1.70011–1.70020</td><td>依交易性質選擇程序</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-section source-section" id="sources">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">SOURCE DISCIPLINE</p>
+          <h2>先看法律狀態，再引用內容</h2>
+        </div>
+      </div>
+      <div class="source-grid">
+        <a href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-FF" target="_blank" rel="noreferrer"><span>01</span><strong>eCFR Title 47</strong><small>現行編纂條文</small><i>↗</i></a>
+        <a href="https://www.federalregister.gov/d/2026-15123" target="_blank" rel="noreferrer"><span>02</span><strong>Federal Register</strong><small>生效日與延後項目</small><i>↗</i></a>
+        <a href="https://docs.fcc.gov/public/attachments/FCC-26-42A1.pdf" target="_blank" rel="noreferrer"><span>03</span><strong>FCC 26-42</strong><small>SLTE 監管制度</small><i>↗</i></a>
+        <a href="https://www.fcc.gov/research-reports/guides/submarine-cable-landing-licenses" target="_blank" rel="noreferrer"><span>04</span><strong>FCC Guide</strong><small>申請流程導覽</small><i>↗</i></a>
+      </div>
+      <div class="disclaimer"><strong>使用界線</strong><p>本網站是研究與合規導覽工具，不構成法律意見。正式申請、申報或合規判斷前，應回查現行 eCFR、Federal Register、FCC 命令、最新 Filing Manual／表單及個別 license conditions。</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark small" aria-hidden="true"><span></span><span></span><span></span></span><strong>FCC 海纜規範知識庫</strong></div>
+    <p>Curated for traceable regulatory research · Last checked 2026.08.01</p>
+    <a href="#top">回到頂端 ↑</a>
+  </footer>
+
+  <dialog id="detail-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="關閉">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <noscript><div class="noscript">此網站需要 JavaScript 才能顯示搜尋與規範卡片。</div></noscript>
+</body>
+</html>
