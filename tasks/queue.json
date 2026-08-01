@@ -1,8 +1,16 @@
 {
   "schema_version": 1,
   "last_updated": "2026-08-01",
-  "status_values": ["ready", "in_progress", "blocked", "done"],
-  "mode_values": ["public", "full_vault"],
+  "status_values": [
+    "ready",
+    "in_progress",
+    "blocked",
+    "done"
+  ],
+  "mode_values": [
+    "public",
+    "full_vault"
+  ],
   "recipe_values": [
     "STATUS_MATRIX",
     "CFR_CARD",
@@ -18,7 +26,7 @@
       "id": "P0-FCC26-MATRIX",
       "priority": 0,
       "order": 10,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "STATUS_MATRIX",
       "title": "建立 FCC 26-42 逐 amendatory instruction 生效矩陣",
@@ -43,7 +51,14 @@
         "full vault 與 public 驗證皆通過"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:27:21Z",
+          "summary": "建立 60-row FCC 26-42 矩陣；14 future_effective、46 delayed_indefinitely；Obsidian/JSON row_id 一致；public/full-vault 驗證通過"
+        }
+      ],
+      "started_at": "2026-08-01T06:21:21Z",
+      "completed_at": "2026-08-01T06:27:21Z"
     },
     {
       "id": "P0-CHANGE-ALERT",
@@ -80,11 +95,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70000 Purpose 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70000",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70000"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70000_Purpose.md"],
-      "acceptance": ["套用 CFR_CARD template", "法律狀態及 paragraph 可回查", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70000"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70000_Purpose.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "法律狀態及 paragraph 可回查",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -96,11 +121,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70002 General requirements 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70002",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70002"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70002_General_requirements.md"],
-      "acceptance": ["套用 CFR_CARD template", "適用範圍與一般要求分列", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70002"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70002_General_requirements.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "適用範圍與一般要求分列",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -112,11 +147,22 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70004 Presumptive disqualifying conditions 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70004",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70004"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70004_不利推定條件.md"],
-      "acceptance": ["套用 CFR_CARD template", "每個不利推定條件分列", "不得把 presumption 寫成絕對禁止", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70004"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70004_不利推定條件.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "每個不利推定條件分列",
+        "不得把 presumption 寫成絕對禁止",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -128,11 +174,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70008 Special temporary authority 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70008",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70008"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70008_STA.md"],
-      "acceptance": ["套用 CFR_CARD template", "申請條件與時限分列", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70008"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70008_STA.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "申請條件與時限分列",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -144,11 +200,22 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70009 Foreign carrier affiliation 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70009",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70009"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70009_外國業者關聯.md"],
-      "acceptance": ["套用 CFR_CARD template", "notification 與 prior approval 分開", "連回歷史 §1.768", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70009"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70009_外國業者關聯.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "notification 與 prior approval 分開",
+        "連回歷史 §1.768",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -160,11 +227,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70010 Amendment of applications 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70010",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70010"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70010_申請修正.md"],
-      "acceptance": ["套用 CFR_CARD template", "觸發事件與程序可回查", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70010"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70010_申請修正.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "觸發事件與程序可回查",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -176,11 +253,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70011 Modification applications 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70011",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70011"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70011_Modification.md"],
-      "acceptance": ["套用 CFR_CARD template", "modification 類型與資料分列", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70011"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70011_Modification.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "modification 類型與資料分列",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -192,11 +279,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70012 Substantial assignment／transfer 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70012",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70012"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70012_實質移轉.md"],
-      "acceptance": ["套用 CFR_CARD template", "assignment 與 transfer 分開", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70012"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70012_實質移轉.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "assignment 與 transfer 分開",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -208,11 +305,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70013 Pro forma notification 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70013",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70013"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70013_Pro_forma.md"],
-      "acceptance": ["套用 CFR_CARD template", "30 日期限與程序可回查", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70013"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70013_Pro_forma.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "30 日期限與程序可回查",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -224,11 +331,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70014 Processing of applications 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70014",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70014"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70014_申請處理.md"],
-      "acceptance": ["套用 CFR_CARD template", "處理程序與例外可回查", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70014"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70014_申請處理.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "處理程序與例外可回查",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -240,11 +357,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70015 Quarterly reports 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70015",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70015"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70015_季度報告.md"],
-      "acceptance": ["套用 CFR_CARD template", "報告主體、內容與時間分列", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70015"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70015_季度報告.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "報告主體、內容與時間分列",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -256,11 +383,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70016 Streamlining eligibility 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70016",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70016"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70016_Streamlining.md"],
-      "acceptance": ["套用 CFR_CARD template", "資格與排除條件分列", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70016"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70016_Streamlining.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "資格與排除條件分列",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -272,11 +409,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70017 Foreign adversary annual report 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70017",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70017"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70017_外國對手年度報告.md"],
-      "acceptance": ["套用 CFR_CARD template", "目前與延後內容分開", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70017"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70017_外國對手年度報告.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "目前與延後內容分開",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -288,11 +435,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70020 Renewal and extension 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70020",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70020"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70020_續照延長.md"],
-      "acceptance": ["套用 CFR_CARD template", "renewal 與 extension 分開", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70020"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70020_續照延長.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "renewal 與 extension 分開",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -304,11 +461,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70021 Electronic filing 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70021",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70021"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70021_電子申報.md"],
-      "acceptance": ["套用 CFR_CARD template", "申報系統與電子提交要求可回查", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70021"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70021_電子申報.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "申報系統與電子提交要求可回查",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -320,11 +487,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70022 Action, revocation and termination 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70022",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70022"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70022_撤銷終止.md"],
-      "acceptance": ["套用 CFR_CARD template", "revocation 與 termination 分開", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70022"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70022_撤銷終止.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "revocation 與 termination 分開",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -336,11 +513,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70023 Covered List certification 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70023",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70023"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70023_Covered_List認證.md"],
-      "acceptance": ["套用 CFR_CARD template", "認證主體、內容及狀態可回查", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70023"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70023_Covered_List認證.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "認證主體、內容及狀態可回查",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -352,11 +539,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70024 One-time security certification 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.70024",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70024"],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70024_一次性安全認證.md"],
-      "acceptance": ["套用 CFR_CARD template", "一次性義務與延後狀態可回查", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70024"
+      ],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/47_CFR_1.70024_一次性安全認證.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "一次性義務與延後狀態可回查",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -368,13 +565,21 @@
       "mode": "full_vault",
       "recipe": "STATUS_NOTE",
       "title": "建立 §§1.70018、1.70019、1.70025–1.70029 placeholder／reserved 狀態說明",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "sources": [
         "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-FF",
         "https://www.federalregister.gov/d/2026-15123"
       ],
-      "targets": ["02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/未生效與保留條文狀態.md"],
-      "acceptance": ["不得把 xxx 或 Reserved 寫成義務", "逐 section 記錄等待的 instruction／公告", "full vault health pass"],
+      "targets": [
+        "02_法源與原文索引/01_47_CFR_Part_1_Subpart_FF/未生效與保留條文狀態.md"
+      ],
+      "acceptance": [
+        "不得把 xxx 或 Reserved 寫成義務",
+        "逐 section 記錄等待的 instruction／公告",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -386,11 +591,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.40001 Executive Branch review 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.40001",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.40001"],
-      "targets": ["02_法源與原文索引/02_47_CFR_Part_1_Subpart_CC/47_CFR_1.40001_Executive_Branch_review.md"],
-      "acceptance": ["套用 CFR_CARD template", "referral、reportable foreign ownership 與例外分列", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.40001"
+      ],
+      "targets": [
+        "02_法源與原文索引/02_47_CFR_Part_1_Subpart_CC/47_CFR_1.40001_Executive_Branch_review.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "referral、reportable foreign ownership 與例外分列",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -402,11 +617,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §63.18 International Section 214 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "63.18",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-63.18"],
-      "targets": ["02_法源與原文索引/05_47_CFR_Part_63_Section_214/47_CFR_63.18_International_Section_214.md"],
-      "acceptance": ["套用 CFR_CARD template", "與 cable landing license 邊界明確", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-63.18"
+      ],
+      "targets": [
+        "02_法源與原文索引/05_47_CFR_Part_63_Section_214/47_CFR_63.18_International_Section_214.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "與 cable landing license 邊界明確",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -418,11 +643,21 @@
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.50002 Covered List 條文卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
       "section": "1.50002",
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.50002"],
-      "targets": ["02_法源與原文索引/02_47_CFR_Part_1_Subpart_DD/47_CFR_1.50002_Covered_List.md"],
-      "acceptance": ["套用 CFR_CARD template", "Covered List 法源與海纜條文交叉連結", "full vault health pass"],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.50002"
+      ],
+      "targets": [
+        "02_法源與原文索引/02_47_CFR_Part_1_Subpart_DD/47_CFR_1.50002_Covered_List.md"
+      ],
+      "acceptance": [
+        "套用 CFR_CARD template",
+        "Covered List 法源與海纜條文交叉連結",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -434,13 +669,27 @@
       "mode": "full_vault",
       "recipe": "FILING_MATRIX",
       "title": "建立 ICFS 申請類型與附件矩陣",
-      "depends_on": ["P1-CFR-1.70008", "P1-CFR-1.70011", "P1-CFR-1.70012", "P1-CFR-1.70013", "P1-CFR-1.70020", "P1-CFR-1.70021"],
+      "depends_on": [
+        "P1-CFR-1.70008",
+        "P1-CFR-1.70011",
+        "P1-CFR-1.70012",
+        "P1-CFR-1.70013",
+        "P1-CFR-1.70020",
+        "P1-CFR-1.70021"
+      ],
       "sources": [
         "https://www.fcc.gov/research-reports/guides/submarine-cable-landing-licenses",
         "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-FF"
       ],
-      "targets": ["04_合規流程映射/ICFS_申請類型與附件矩陣.md"],
-      "acceptance": ["七種事件各自一列", "license 與 Section 214 分欄", "每列有 filing system、附件、期限與來源", "full vault health pass"],
+      "targets": [
+        "04_合規流程映射/ICFS_申請類型與附件矩陣.md"
+      ],
+      "acceptance": [
+        "七種事件各自一列",
+        "license 與 Section 214 分欄",
+        "每列有 filing system、附件、期限與來源",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -452,10 +701,20 @@
       "mode": "full_vault",
       "recipe": "EQUIPMENT_CARD",
       "title": "建立 Power Feed Equipment 設備卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70005"],
-      "targets": ["08_設備與系統卡/設備_PFE.md"],
-      "acceptance": ["套用 EQUIPMENT_CARD template", "FCC 與非 FCC 技術標準分開", "full vault health pass"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70005"
+      ],
+      "targets": [
+        "08_設備與系統卡/設備_PFE.md"
+      ],
+      "acceptance": [
+        "套用 EQUIPMENT_CARD template",
+        "FCC 與非 FCC 技術標準分開",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -467,10 +726,20 @@
       "mode": "full_vault",
       "recipe": "EQUIPMENT_CARD",
       "title": "建立 Transponder 設備卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70001"],
-      "targets": ["08_設備與系統卡/設備_Transponder.md"],
-      "acceptance": ["套用 EQUIPMENT_CARD template", "系統邊界與 SLTE 關聯明確", "full vault health pass"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70001"
+      ],
+      "targets": [
+        "08_設備與系統卡/設備_Transponder.md"
+      ],
+      "acceptance": [
+        "套用 EQUIPMENT_CARD template",
+        "系統邊界與 SLTE 關聯明確",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -482,10 +751,20 @@
       "mode": "full_vault",
       "recipe": "EQUIPMENT_CARD",
       "title": "建立 Repeater 設備卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
-      "sources": ["data/regulatory-status.json"],
-      "targets": ["08_設備與系統卡/設備_Repeater.md"],
-      "acceptance": ["套用 EQUIPMENT_CARD template", "沒有 FCC 明文時明確標示", "full vault health pass"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
+      "sources": [
+        "data/regulatory-status.json"
+      ],
+      "targets": [
+        "08_設備與系統卡/設備_Repeater.md"
+      ],
+      "acceptance": [
+        "套用 EQUIPMENT_CARD template",
+        "沒有 FCC 明文時明確標示",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -497,10 +776,20 @@
       "mode": "full_vault",
       "recipe": "EQUIPMENT_CARD",
       "title": "建立 Branching Unit 設備卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70005"],
-      "targets": ["08_設備與系統卡/設備_Branching_Unit.md"],
-      "acceptance": ["套用 EQUIPMENT_CARD template", "申請描述與非 FCC 性能規格分開", "full vault health pass"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70005"
+      ],
+      "targets": [
+        "08_設備與系統卡/設備_Branching_Unit.md"
+      ],
+      "acceptance": [
+        "套用 EQUIPMENT_CARD template",
+        "申請描述與非 FCC 性能規格分開",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -512,10 +801,21 @@
       "mode": "full_vault",
       "recipe": "EQUIPMENT_CARD",
       "title": "建立 Cable Landing Station 設施卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70005", "https://www.ecfr.gov/current/title-47/section-1.70007"],
-      "targets": ["08_設備與系統卡/設施_Cable_Landing_Station.md"],
-      "acceptance": ["套用 EQUIPMENT_CARD template", "ownership、control、location confidentiality 分列", "full vault health pass"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70005",
+        "https://www.ecfr.gov/current/title-47/section-1.70007"
+      ],
+      "targets": [
+        "08_設備與系統卡/設施_Cable_Landing_Station.md"
+      ],
+      "acceptance": [
+        "套用 EQUIPMENT_CARD template",
+        "ownership、control、location confidentiality 分列",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -527,10 +827,20 @@
       "mode": "full_vault",
       "recipe": "EQUIPMENT_CARD",
       "title": "建立 Beach Manhole 設施卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70005"],
-      "targets": ["08_設備與系統卡/設施_Beach_Manhole.md"],
-      "acceptance": ["套用 EQUIPMENT_CARD template", "位置資料與公開限制明確", "full vault health pass"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70005"
+      ],
+      "targets": [
+        "08_設備與系統卡/設施_Beach_Manhole.md"
+      ],
+      "acceptance": [
+        "套用 EQUIPMENT_CARD template",
+        "位置資料與公開限制明確",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -542,10 +852,22 @@
       "mode": "full_vault",
       "recipe": "EQUIPMENT_CARD",
       "title": "建立 NOC／SOC 與備援設施卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70005", "https://www.ecfr.gov/current/title-47/section-1.70006"],
-      "targets": ["08_設備與系統卡/設施_NOC_SOC.md"],
-      "acceptance": ["套用 EQUIPMENT_CARD template", "NOC、SOC、backup 角色分開", "位置保密性明確", "full vault health pass"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70005",
+        "https://www.ecfr.gov/current/title-47/section-1.70006"
+      ],
+      "targets": [
+        "08_設備與系統卡/設施_NOC_SOC.md"
+      ],
+      "acceptance": [
+        "套用 EQUIPMENT_CARD template",
+        "NOC、SOC、backup 角色分開",
+        "位置保密性明確",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -557,10 +879,20 @@
       "mode": "full_vault",
       "recipe": "EQUIPMENT_CARD",
       "title": "建立 Wet Segment／Dry Segment 系統卡",
-      "depends_on": ["P0-FCC26-MATRIX"],
-      "sources": ["https://www.ecfr.gov/current/title-47/section-1.70005"],
-      "targets": ["08_設備與系統卡/系統_Wet_Dry_Segment.md"],
-      "acceptance": ["套用 EQUIPMENT_CARD template", "系統邊界與位置資料處理明確", "full vault health pass"],
+      "depends_on": [
+        "P0-FCC26-MATRIX"
+      ],
+      "sources": [
+        "https://www.ecfr.gov/current/title-47/section-1.70005"
+      ],
+      "targets": [
+        "08_設備與系統卡/系統_Wet_Dry_Segment.md"
+      ],
+      "acceptance": [
+        "套用 EQUIPMENT_CARD template",
+        "系統邊界與位置資料處理明確",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     },
@@ -573,9 +905,21 @@
       "recipe": "WEB_FEATURE",
       "title": "建立完整 35-section 官方全文索引",
       "depends_on": [],
-      "sources": ["data/regulatory-status.json"],
-      "targets": ["index.html", "assets/app.js", "assets/site.css"],
-      "acceptance": ["35 個 section 均可搜尋", "current、reserved、placeholder 可篩選", "官方全文與 URL 可開啟", "390px 無水平溢位", "verify_project.py 通過"],
+      "sources": [
+        "data/regulatory-status.json"
+      ],
+      "targets": [
+        "index.html",
+        "assets/app.js",
+        "assets/site.css"
+      ],
+      "acceptance": [
+        "35 個 section 均可搜尋",
+        "current、reserved、placeholder 可篩選",
+        "官方全文與 URL 可開啟",
+        "390px 無水平溢位",
+        "verify_project.py 通過"
+      ],
       "human_review_required": false,
       "evidence": []
     },
@@ -587,10 +931,21 @@
       "mode": "full_vault",
       "recipe": "CASE_CARD",
       "title": "建立第一批 license／waiver／enforcement 案例模板與索引",
-      "depends_on": ["P1-ICFS-MATRIX"],
-      "sources": ["https://www.fcc.gov/"],
-      "targets": ["06_案例命令與許可/00_案例命令與許可總覽.md"],
-      "acceptance": ["至少各一個 license、waiver、enforcement 樣本", "每個案例有 file number 與官方 order", "case_specific 明確", "full vault health pass"],
+      "depends_on": [
+        "P1-ICFS-MATRIX"
+      ],
+      "sources": [
+        "https://www.fcc.gov/"
+      ],
+      "targets": [
+        "06_案例命令與許可/00_案例命令與許可總覽.md"
+      ],
+      "acceptance": [
+        "至少各一個 license、waiver、enforcement 樣本",
+        "每個案例有 file number 與官方 order",
+        "case_specific 明確",
+        "full vault health pass"
+      ],
       "human_review_required": true,
       "evidence": []
     }

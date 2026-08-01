@@ -140,10 +140,10 @@ python3 scripts/update_regulatory_data.py --accept-current
 
 ### 5.1 FCC 26-42 生效矩陣
 
-- [ ] 建立逐 amendatory instruction 對照表。
-- [ ] 對每項標示 `effective`、`future_effective`、`delayed_indefinitely` 或 `proposed`。
-- [ ] 記錄 CFR section、段落、資訊蒐集／OMB 狀態、Federal Register 文件及日期。
-- [ ] 網站新增可篩選的 FCC 26-42 生效矩陣。
+- [x] 建立逐 amendatory instruction 對照表。
+- [x] 對每項標示 `effective`、`future_effective`、`delayed_indefinitely` 或 `proposed`。
+- [x] 記錄 CFR section、段落、資訊蒐集／OMB 狀態、Federal Register 文件及日期。
+- [x] 網站新增可篩選的 FCC 26-42 生效矩陣。
 - [ ] 2026-09-25 前後各執行一次人工複核。
 
 驗收標準：任何使用者都能回答「哪個段落在何時生效、哪個仍延後」，且每列可回到官方來源。
@@ -257,7 +257,7 @@ python3 scripts/update_regulatory_data.py --accept-current
 ## 11. P3：網站與品質
 
 - [ ] 建立完整 35-section 官方全文索引頁，不只依附在 13 張整理卡中。
-- [ ] 新增 FCC 26-42 生效矩陣頁。
+- [x] 新增 FCC 26-42 生效矩陣頁。
 - [ ] 新增 filing／deadline 可下載表格。
 - [ ] 加入網站自動化測試：資料 schema、搜尋、篩選、dialog、手機無溢位。
 - [ ] 加入無障礙檢查與外部連結檢查。

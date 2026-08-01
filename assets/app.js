@@ -260,6 +260,7 @@ const state = {
 };
 
 let liveSourceMap = new Map();
+let fcc26Rows = [];
 
 const grid = document.querySelector("#regulation-grid");
 const resultCount = document.querySelector("#result-count");
@@ -336,6 +337,46 @@ function renderDeadlines() {
   document.querySelector("#deadline-body").innerHTML = deadlines
     .map(row => "<tr>" + row.map(cell => "<td>" + escapeHtml(cell) + "</td>").join("") + "</tr>")
     .join("");
+}
+
+const fcc26StatusLabels = {
+  future_effective: "2026.09.25 預定生效",
+  delayed_indefinitely: "無限期延後"
+};
+
+function renderFcc26Matrix() {
+  const body = document.querySelector("#fcc26-body");
+  const query = normalize(document.querySelector("#fcc26-search").value);
+  const status = document.querySelector("#fcc26-status-filter").value;
+  const rows = fcc26Rows.filter(row => {
+    const text = normalize([row.row_id, "instruction " + row.instruction, row.section, row.paragraph, row.action].join(" "));
+    return (!query || text.includes(query)) && (status === "all" || row.status === status);
+  });
+  body.innerHTML = rows.length ? rows.map(row => [
+    "<tr><td><strong>", escapeHtml(row.instruction), "</strong><small>", escapeHtml(row.row_id), "</small></td>",
+    "<td>", escapeHtml(row.section), " <code>", escapeHtml(row.paragraph), "</code></td>",
+    "<td><code>", escapeHtml(row.action), "</code></td>",
+    '<td><span class="matrix-status ', escapeHtml(row.status), '">', escapeHtml(fcc26StatusLabels[row.status] || row.status),
+    "</span><small>", escapeHtml(row.date || "等待後續公告"), "</small></td>",
+    '<td><a href="', escapeHtml(row.official_url), '" target="_blank" rel="noreferrer">', escapeHtml(row.fr_citation), " ↗</a></td></tr>"
+  ].join("")).join("") : '<tr><td colspan="5">沒有符合目前條件的 rows。</td></tr>';
+  document.querySelector("#fcc26-result").textContent = "顯示 " + rows.length + "／" + fcc26Rows.length + " rows";
+}
+
+async function loadFcc26Matrix() {
+  try {
+    const response = await fetch("data/fcc26-status.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("HTTP " + response.status);
+    const feed = await response.json();
+    fcc26Rows = feed.rows;
+    document.querySelector("#fcc26-future-count").textContent = String(fcc26Rows.filter(row => row.status === "future_effective").length);
+    document.querySelector("#fcc26-delayed-count").textContent = String(fcc26Rows.filter(row => row.status === "delayed_indefinitely").length);
+    renderFcc26Matrix();
+  } catch (error) {
+    document.querySelector("#fcc26-body").innerHTML = '<tr><td colspan="5">逐項資料暫時無法載入。請使用 91 FR 46844 官方連結核對。</td></tr>';
+    document.querySelector("#fcc26-result").textContent = "資料載入失敗";
+    console.warn("FCC 26-42 matrix unavailable:", error);
+  }
 }
 
 function citedSection(item) {
@@ -483,6 +524,8 @@ grid.addEventListener("click", event => {
 });
 
 document.querySelector("#clear-filters").addEventListener("click", clearFilters);
+document.querySelector("#fcc26-search").addEventListener("input", renderFcc26Matrix);
+document.querySelector("#fcc26-status-filter").addEventListener("change", renderFcc26Matrix);
 document.querySelector("[data-open-status]").addEventListener("click", () => {
   document.querySelector("#transition").scrollIntoView({ behavior: "smooth" });
 });
@@ -501,4 +544,5 @@ document.addEventListener("keydown", event => {
 
 renderDeadlines();
 renderCards();
+loadFcc26Matrix();
 loadRegulatoryStatus();

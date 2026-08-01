@@ -24,6 +24,7 @@
     </a>
     <nav class="header-nav" aria-label="主要導覽">
       <a href="#regulations">規範索引</a>
+      <a href="#fcc26">FCC 26-42</a>
       <a href="#deadlines">期限</a>
       <a href="#transition">版本轉換</a>
       <a href="#sources">來源</a>
@@ -125,6 +126,50 @@
         <strong>找不到相符規範</strong>
         <p>試著搜尋較短的條號，或清除目前篩選。</p>
         <button type="button" id="clear-filters">清除篩選</button>
+      </div>
+    </section>
+
+    <section class="content-section matrix-section" id="fcc26">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">EFFECTIVE-DATE MATRIX</p>
+          <h2>FCC 26-42<br>逐項生效矩陣</h2>
+          <p>把 22 個 amendatory instructions 拆成 60 個穩定 row_id；依 section、paragraph 與法律狀態查詢。</p>
+        </div>
+        <div class="matrix-summary" aria-label="FCC 26-42 狀態摘要">
+          <div><strong id="fcc26-future-count">14</strong><span>2026.09.25</span></div>
+          <div><strong id="fcc26-delayed-count">46</strong><span>無限期延後</span></div>
+        </div>
+      </div>
+      <div class="matrix-warning">
+        <strong>目前不是全部生效。</strong>
+        <span>Instructions 1、2、3、6、7、10 適用一般生效日；4、5、8、9、11–22 必須等待 FCC 另行公告。</span>
+      </div>
+      <div class="matrix-controls" aria-label="FCC 26-42 矩陣篩選">
+        <label for="fcc26-search">搜尋 section／paragraph／row ID
+          <input id="fcc26-search" type="search" placeholder="例如：1.70007、instruction 11、fcc26-i18">
+        </label>
+        <label for="fcc26-status-filter">法律狀態
+          <select id="fcc26-status-filter">
+            <option value="all">全部狀態</option>
+            <option value="future_effective">2026.09.25 預定生效</option>
+            <option value="delayed_indefinitely">無限期延後</option>
+          </select>
+        </label>
+      </div>
+      <div class="matrix-table-wrap">
+        <table class="status-matrix">
+          <thead><tr><th>Instruction</th><th>Section／paragraph</th><th>Action</th><th>狀態／日期</th><th>證據</th></tr></thead>
+          <tbody id="fcc26-body">
+            <tr><td colspan="5">載入逐項矩陣中；若資料無法載入，請直接查閱下方 Federal Register。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="matrix-result" id="fcc26-result" aria-live="polite">共 60 rows</p>
+      <div class="matrix-source-links">
+        <a href="data/fcc26-status.json">下載公開 JSON</a>
+        <a href="https://www.federalregister.gov/d/2026-15123" target="_blank" rel="noreferrer">91 FR 46844 ↗</a>
+        <a href="https://www.govinfo.gov/content/pkg/FR-2026-07-27/pdf/2026-15123.pdf" target="_blank" rel="noreferrer">GovInfo 官方 PDF ↗</a>
       </div>
     </section>
 

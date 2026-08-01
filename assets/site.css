@@ -661,6 +661,135 @@ kbd {
   gap: 18px;
 }
 
+.matrix-section {
+  border-top: 1px solid var(--border);
+  background: var(--white);
+}
+
+.matrix-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(130px, 1fr));
+  border: 1px solid var(--border);
+}
+
+.matrix-summary div {
+  display: grid;
+  padding: 17px 20px;
+}
+
+.matrix-summary div + div {
+  border-left: 1px solid var(--border);
+}
+
+.matrix-summary strong {
+  font: 500 30px var(--mono);
+}
+
+.matrix-summary span,
+.status-matrix small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.matrix-warning {
+  display: flex;
+  gap: 13px;
+  margin-bottom: 18px;
+  padding: 14px 17px;
+  border-left: 4px solid var(--amber);
+  background: rgba(243, 180, 75, .16);
+  font-size: 13px;
+}
+
+.matrix-controls {
+  display: grid;
+  grid-template-columns: 1fr minmax(220px, .28fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.matrix-controls label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.matrix-controls input,
+.matrix-controls select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.matrix-table-wrap {
+  max-height: 660px;
+  overflow: auto;
+  border: 1px solid var(--border);
+}
+
+.status-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.status-matrix th {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  padding: 12px;
+  color: var(--white);
+  background: var(--ink);
+  text-align: left;
+}
+
+.status-matrix td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.status-matrix td:first-child,
+.status-matrix td:nth-child(4) {
+  display: grid;
+  gap: 4px;
+}
+
+.status-matrix code {
+  font: 11px var(--mono);
+}
+
+.matrix-status {
+  width: max-content;
+  padding: 2px 6px;
+  border: 1px solid currentColor;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.matrix-status.future_effective { color: #8b5a00; }
+.matrix-status.delayed_indefinitely { color: #a33d35; }
+
+.matrix-result {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font: 11px var(--mono);
+}
+
+.matrix-source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 18px;
+  font-size: 12px;
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+
 .reg-card {
   position: relative;
   display: flex;
@@ -1579,6 +1708,23 @@ dialog::backdrop {
 
   .card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .matrix-summary {
+    width: 100%;
+  }
+
+  .matrix-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .matrix-warning {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .status-matrix {
+    min-width: 760px;
   }
 
   .reg-card {
