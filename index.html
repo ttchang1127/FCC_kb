@@ -46,12 +46,12 @@
       <aside class="status-console" aria-label="資料新鮮度與法律狀態">
         <div class="console-head">
           <span>LIVE REGULATORY STATUS</span>
-          <span class="pulse-dot">VERIFIED</span>
+          <span class="pulse-dot" id="sync-badge">LOADING</span>
         </div>
         <div class="date-lockup">
           <span>eCFR DATA</span>
-          <strong>2026.07.30</strong>
-          <small>人工查核 2026.08.01 · UTC+8</small>
+          <strong id="live-ecfr-date">2026.07.30</strong>
+          <small id="last-auto-check">載入自動檢核資料中…</small>
         </div>
         <div class="console-row">
           <span class="status-dot effective"></span>
@@ -202,6 +202,23 @@
           <h2>先看法律狀態，再引用內容</h2>
         </div>
       </div>
+      <div class="automation-panel" id="automation-panel" data-state="loading">
+        <div class="automation-copy">
+          <span class="automation-icon" aria-hidden="true">↻</span>
+          <div>
+            <small>OFFICIAL SOURCE MONITOR</small>
+            <strong id="automation-title">每日自動檢核已設定</strong>
+            <p id="automation-message">正在讀取 eCFR 與 Federal Register 的最新來源狀態。</p>
+          </div>
+        </div>
+        <div class="automation-stats">
+          <div><span>eCFR 截至</span><strong id="automation-ecfr">—</strong></div>
+          <div><span>現行條文</span><strong id="automation-sections">—</strong></div>
+          <div><span>最新 FR 文件</span><strong id="automation-fr">—</strong></div>
+          <div><span>待複核變動</span><strong id="automation-changes">—</strong></div>
+        </div>
+        <a href="https://github.com/ttchang1127/FCC_kb/actions/workflows/update-regulations.yml" target="_blank" rel="noreferrer">查看自動更新紀錄 ↗</a>
+      </div>
       <div class="source-grid">
         <a href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-FF" target="_blank" rel="noreferrer"><span>01</span><strong>eCFR Title 47</strong><small>現行編纂條文</small><i>↗</i></a>
         <a href="https://www.federalregister.gov/d/2026-15123" target="_blank" rel="noreferrer"><span>02</span><strong>Federal Register</strong><small>生效日與延後項目</small><i>↗</i></a>
@@ -214,7 +231,7 @@
 
   <footer>
     <div class="footer-brand"><span class="brand-mark small" aria-hidden="true"><span></span><span></span><span></span></span><strong>FCC 海纜規範知識庫</strong></div>
-    <p>Curated for traceable regulatory research · Last checked 2026.08.01</p>
+    <p id="footer-check-status">Curated for traceable regulatory research · Auto source monitor enabled</p>
     <a href="#top">回到頂端 ↑</a>
   </footer>
 

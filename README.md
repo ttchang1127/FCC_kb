@@ -18,6 +18,18 @@ python3 -m http.server 4173
 
 開啟 `http://127.0.0.1:4173/`。
 
+## 自動更新
+
+GitHub Actions 每日約於台北時間 04:23 執行 `scripts/update_regulatory_data.py`：
+
+- 從 eCFR API 抓取 Part 1 Subpart FF §§1.70000–1.70029、§4.15、§43.82 等監測條文全文。
+- 從 FederalRegister.gov API 搜尋 FCC 海纜相關 final rule、proposed rule 與生效公告。
+- 以 SHA-256 與人工審核基準比較；若來源內容改變，網站會顯示「待人工複核」。
+- 自動來源資料寫入 `data/regulatory-status.json`，並由 GitHub Actions 提交至 `main`。
+- 正式網站直接讀取 `main` 的最新公開 JSON，因此自動 commit 不需另外觸發 Pages rebuild。
+
+可在 repository 的 Actions 頁面手動執行 **Update FCC regulatory sources**。只有完成法律內容複核後，才應以 `python3 scripts/update_regulatory_data.py --accept-current` 更新人工審核基準。
+
 ## 重要聲明
 
 本網站是研究與合規導覽工具，不構成法律意見。正式申請、申報或作成合規判斷前，應回查 eCFR、Federal Register、FCC 命令、最新表單及個別 license conditions。

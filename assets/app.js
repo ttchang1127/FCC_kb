@@ -259,6 +259,8 @@ const state = {
   status: "all"
 };
 
+let liveSourceMap = new Map();
+
 const grid = document.querySelector("#regulation-grid");
 const resultCount = document.querySelector("#result-count");
 const emptyState = document.querySelector("#empty-state");
@@ -336,7 +338,28 @@ function renderDeadlines() {
     .join("");
 }
 
+function citedSection(item) {
+  const match = item.citation.match(/§(\d+\.\d+)/);
+  return match ? match[1] : null;
+}
+
+function officialTextTemplate(item) {
+  const section = citedSection(item);
+  const source = section ? liveSourceMap.get(section) : null;
+  if (!source || source.content_status !== "current_text" || !source.paragraphs?.length) {
+    return "";
+  }
+  return [
+    '<details class="official-text"><summary>檢視自動抓取的官方現行條文 · §',
+    escapeHtml(section), '（截至 ', escapeHtml(source.as_of), '）</summary>',
+    '<div class="official-text-body"><p class="official-text-note">此處為官方英文來源的自動鏡像；法律狀態仍應搭配 Federal Register 與上方人工整理內容判讀。</p>',
+    source.paragraphs.map(paragraph => "<p>" + escapeHtml(paragraph) + "</p>").join(""),
+    '</div></details>'
+  ].join("");
+}
+
 function openDetail(item) {
+  const officialText = officialTextTemplate(item);
   dialogContent.innerHTML = [
     '<div class="dialog-inner"><span class="status-badge ', escapeHtml(item.status), '">',
     escapeHtml(statusLabels[item.status]), '</span><p class="dialog-citation">',
@@ -346,10 +369,78 @@ function openDetail(item) {
     item.points.map(point => "<li>" + escapeHtml(point) + "</li>").join(""),
     '</ul></div><div class="detail-meta"><div><span>AUTHORITY</span><strong>',
     escapeHtml(item.authority), '</strong></div><div><span>SOURCE STATUS</span><strong>',
-    escapeHtml(item.checked), '</strong></div></div><a class="official-link" href="',
+    escapeHtml(item.checked), '</strong></div></div>', officialText,
+    '<a class="official-link" href="',
     escapeHtml(item.url), '" target="_blank" rel="noreferrer">開啟官方來源 <span aria-hidden="true">↗</span></a></div>'
   ].join("");
   dialog.showModal();
+}
+
+function compactDate(value) {
+  return value ? String(value).replaceAll("-", ".") : "—";
+}
+
+function localTimestamp(value) {
+  if (!value) return "—";
+  return new Intl.DateTimeFormat("zh-TW", {
+    timeZone: "Asia/Taipei",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  }).format(new Date(value));
+}
+
+async function loadRegulatoryStatus() {
+  const panel = document.querySelector("#automation-panel");
+  const badge = document.querySelector("#sync-badge");
+  try {
+    const isGitHubPages = window.location.hostname === "ttchang1127.github.io";
+    const feedUrl = isGitHubPages
+      ? "https://raw.githubusercontent.com/ttchang1127/FCC_kb/main/data/regulatory-status.json"
+      : "data/regulatory-status.json";
+    const cacheKey = Math.floor(Date.now() / 300000);
+    const response = await fetch(feedUrl + "?v=" + cacheKey, { cache: "no-store" });
+    if (!response.ok) throw new Error("HTTP " + response.status);
+    const feed = await response.json();
+    liveSourceMap = new Map(feed.ecfr.sections.map(section => [section.section, section]));
+
+    const sectionChanges = feed.review.section_changes.length;
+    const documentChanges = feed.review.new_federal_register_documents.length;
+    const changeCount = sectionChanges + documentChanges;
+    const reviewRequired = feed.review.status === "review_required";
+    const checkedAt = localTimestamp(feed.generated_at);
+
+    panel.dataset.state = feed.review.status;
+    badge.textContent = reviewRequired ? "REVIEW" : "AUTOMATED";
+    badge.classList.toggle("review", reviewRequired);
+    badge.classList.remove("offline");
+    document.querySelector("#live-ecfr-date").textContent = compactDate(feed.ecfr.up_to_date_as_of);
+    document.querySelector("#last-auto-check").textContent = "自動檢核 " + checkedAt + " · UTC+8";
+    document.querySelector("#automation-ecfr").textContent = feed.ecfr.up_to_date_as_of;
+    document.querySelector("#automation-sections").textContent = String(feed.ecfr.current_text_section_count);
+    document.querySelector("#automation-fr").textContent = feed.federal_register.latest_publication_date || "—";
+    document.querySelector("#automation-changes").textContent = String(changeCount);
+    document.querySelector("#footer-check-status").textContent = "Official sources checked " + checkedAt + " · Human review baseline " + (feed.review.ecfr_reviewed_as_of || "—");
+
+    if (reviewRequired) {
+      document.querySelector("#automation-title").textContent = "官方來源有變動，待人工複核";
+      document.querySelector("#automation-message").textContent = "偵測到 " + sectionChanges + " 個條文變動與 " + documentChanges + " 份新 Federal Register 文件；中文摘要尚未自動改寫。";
+    } else {
+      document.querySelector("#automation-title").textContent = "官方來源已自動檢核";
+      document.querySelector("#automation-message").textContent = "目前來源雜湊與人工審核基準一致；官方條文全文每日自動更新。";
+    }
+  } catch (error) {
+    panel.dataset.state = "error";
+    badge.textContent = "OFFLINE";
+    badge.classList.add("offline");
+    document.querySelector("#automation-title").textContent = "無法讀取自動檢核資料";
+    document.querySelector("#automation-message").textContent = "請直接查閱 eCFR，或查看 GitHub Actions 執行紀錄。";
+    document.querySelector("#last-auto-check").textContent = "自動來源資料暫時無法載入";
+    console.warn("Regulatory status feed unavailable:", error);
+  }
 }
 
 function clearFilters() {
@@ -410,3 +501,4 @@ document.addEventListener("keydown", event => {
 
 renderDeadlines();
 renderCards();
+loadRegulatoryStatus();
