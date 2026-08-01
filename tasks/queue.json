@@ -694,7 +694,7 @@
       "id": "P1-STATUS-PLACEHOLDERS",
       "priority": 1,
       "order": 280,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "STATUS_NOTE",
       "title": "建立 §§1.70018、1.70019、1.70025–1.70029 placeholder／reserved 狀態說明",
@@ -714,7 +714,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:49:54Z",
+          "summary": "1.70018/25-29逐節對應instructions16/18-22 delayed；1.70019 reserved無instruction；明列不得形成義務與所待FR公告；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:49:00Z",
+      "completed_at": "2026-08-01T06:49:54Z"
     },
     {
       "id": "P1-CFR-1.40001",
