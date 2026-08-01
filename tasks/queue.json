@@ -164,7 +164,7 @@
       "id": "P1-CFR-1.70004",
       "priority": 1,
       "order": 120,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70004 Presumptive disqualifying conditions 條文卡",
@@ -185,7 +185,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:35:30Z",
+          "summary": "五項不利推定逐列；明示 rebuttable 且 clear-and-convincing 反證；適用日期/申請類型附 paragraph；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:34:55Z",
+      "completed_at": "2026-08-01T06:35:30Z"
     },
     {
       "id": "P1-CFR-1.70008",
