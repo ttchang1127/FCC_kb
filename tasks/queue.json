@@ -496,7 +496,7 @@
       "id": "P1-CFR-1.70017",
       "priority": 1,
       "order": 220,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70017 Foreign adversary annual report 條文卡",
@@ -516,7 +516,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:44:33Z",
+          "summary": "現行四criteria、ICFS/Committee、30-day data currency與initial six-month deadline依91 FR 42137；FCC26 instruction15延後分離；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:43:48Z",
+      "completed_at": "2026-08-01T06:44:33Z"
     },
     {
       "id": "P1-CFR-1.70020",
