@@ -793,7 +793,7 @@
       "id": "P1-CFR-1.50002",
       "priority": 1,
       "order": 320,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.50002 Covered List 條文卡",
@@ -813,7 +813,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:55:59Z",
+          "summary": "CFR_CARD created with Covered List legal basis, mechanical live-list check, and submarine-cable crosslinks; full-vault health PASS"
+        }
+      ],
+      "started_at": "2026-08-01T06:54:05Z",
+      "completed_at": "2026-08-01T06:55:59Z"
     },
     {
       "id": "P1-ICFS-MATRIX",
