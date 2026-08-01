@@ -1285,8 +1285,21 @@ table {
 
 .eva-timeline {
   display: grid;
+  gap: 34px;
+}
+
+.eva-date-group {
+  display: grid;
   grid-template-columns: 150px minmax(0, 1fr);
-  gap: 22px 28px;
+  gap: 28px;
+  align-items: start;
+  min-width: 0;
+}
+
+.eva-date-questions {
+  display: grid;
+  gap: 22px;
+  min-width: 0;
 }
 
 .eva-date-marker {
@@ -1315,11 +1328,6 @@ table {
   border: 1px solid var(--border);
   background: var(--white);
   box-shadow: 10px 10px 0 rgba(7, 26, 34, .04);
-}
-
-.eva-question-card + .eva-date-marker,
-.eva-question-card + .eva-question-card {
-  margin-top: 10px;
 }
 
 .eva-question-meta {
@@ -1952,7 +1960,7 @@ dialog::backdrop {
     padding-top: 16px;
   }
 
-  .eva-timeline {
+  .eva-date-group {
     grid-template-columns: 120px minmax(0, 1fr);
   }
 
@@ -2123,7 +2131,7 @@ dialog::backdrop {
     gap: 8px;
   }
 
-  .eva-timeline {
+  .eva-date-group {
     grid-template-columns: minmax(0, 1fr);
   }
 

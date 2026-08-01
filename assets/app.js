@@ -454,9 +454,9 @@ function renderEvaQuestions(feed) {
   }, new Map());
   const timeline = document.querySelector("#eva-question-list");
   timeline.innerHTML = [...grouped.entries()].map(([date, items]) => [
-    '<div class="eva-date-marker"><time datetime="', escapeHtml(date), '">', escapeHtml(compactDate(date)),
+    '<div class="eva-date-group"><div class="eva-date-marker"><time datetime="', escapeHtml(date), '">', escapeHtml(compactDate(date)),
     "</time><span>", items.length, items.length === 1 ? " QUESTION" : " QUESTIONS", "</span></div>",
-    items.map(evaQuestionTemplate).join("")
+    '<div class="eva-date-questions">', items.map(evaQuestionTemplate).join(""), "</div></div>"
   ].join("")).join("");
   timeline.dataset.state = "loaded";
   document.querySelector("#eva-question-count").textContent = String(questions.length).padStart(2, "0");

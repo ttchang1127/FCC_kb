@@ -903,7 +903,7 @@
       "id": "P1-WEB-EVA-LAYOUT-FIX",
       "priority": 1,
       "order": 491,
-      "status": "ready",
+      "status": "done",
       "mode": "public",
       "recipe": "WEB_FEATURE",
       "title": "修正 Eva 問題集多題 Grid 排版",
@@ -926,7 +926,14 @@
         "verify_project.py 與 JavaScript syntax 通過"
       ],
       "human_review_required": false,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T07:34:25Z",
+          "summary": "確認原錯誤：第二卡被放入 150px 日期欄且高 11366.7px；改為 eva-date-group + eva-date-questions；1440px 兩卡同寬 1045.4px、正常高度 911/1395.8px；390px 兩卡同寬 350px、scrollWidth=390；實際截圖確認；驗證 PASS"
+        }
+      ],
+      "started_at": "2026-08-01T07:32:56Z",
+      "completed_at": "2026-08-01T07:34:25Z"
     },
     {
       "id": "P2-EQUIP-PFE",
