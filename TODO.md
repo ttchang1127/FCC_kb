@@ -1,6 +1,6 @@
 # FCC_kb 待辦與交接
 
-> 最後人工更新：2026-08-01（Asia/Taipei）  
+> 最後人工更新：2026-08-01（Asia/Taipei）<br>
 > 使用方式：每次開始工作先讀本檔，再查看 `data/regulatory-status.json` 與 GitHub Actions 最新執行結果；完成工作後同步更新本檔並推送。
 
 ## 1. 專案目標
