@@ -939,7 +939,7 @@
       "id": "P1-WEB-ASSET-CACHE-BUST",
       "priority": 1,
       "order": 492,
-      "status": "ready",
+      "status": "done",
       "mode": "public",
       "recipe": "WEB_FEATURE",
       "title": "避免 GitHub Pages 新 HTML 與舊 CSS 快取混搭",
@@ -963,7 +963,14 @@
         "verify_project.py 通過"
       ],
       "human_review_required": false,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T07:39:14Z",
+          "summary": "確認 GitHub Pages 對未版本化 HTML/CSS 回傳 cache-control max-age=600，造成新 HTML 搭配舊 CSS；index 改用 site.css/app.js?v=20260801-3；瀏覽器 performance entries 確認載入版本化資產；1440px 兩卡同欄同寬 1045.4px；390px 兩卡 350px 且 scrollWidth=390；驗證 PASS"
+        }
+      ],
+      "started_at": "2026-08-01T07:38:17Z",
+      "completed_at": "2026-08-01T07:39:14Z"
     },
     {
       "id": "P2-EQUIP-PFE",
