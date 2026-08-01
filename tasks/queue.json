@@ -628,7 +628,7 @@
       "id": "P1-CFR-1.70023",
       "priority": 1,
       "order": 260,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70023 Covered List certification 條文卡",
@@ -648,7 +648,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:47:32Z",
+          "summary": "依91 FR 42137確認effective；主體、certification、60日=2026-09-06、Covered-List-licensee例外與ICFS附件程序；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:47:00Z",
+      "completed_at": "2026-08-01T06:47:32Z"
     },
     {
       "id": "P1-CFR-1.70024",
