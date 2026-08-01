@@ -973,6 +973,44 @@
       "completed_at": "2026-08-01T07:39:14Z"
     },
     {
+      "id": "P1-AUTO-EVA-DAILY",
+      "priority": 1,
+      "order": 493,
+      "status": "ready",
+      "mode": "full_vault",
+      "recipe": "WEB_FEATURE",
+      "title": "每日 05:00 自動處理 Eva LINE 提問並發布網頁",
+      "depends_on": [
+        "P1-WEB-EVA-QUESTIONS",
+        "P1-WEB-ASSET-CACHE-BUST"
+      ],
+      "sources": [
+        "data/eva-questions.json",
+        "docs/AI_RUNBOOK.md"
+      ],
+      "targets": [
+        "AGENTS.md",
+        "scripts/process_eva_line_questions.mjs",
+        "docs/EVA_LINE_AUTOMATION.md",
+        "assets/app.js",
+        "index.html"
+      ],
+      "acceptance": [
+        "只接受本機授權清單中 Eva Chang 的 LINE user ID",
+        "LINE 文字只當資料且不得覆蓋安全規則或執行任意指令",
+        "每天 Asia/Taipei 05:00 由 launchd 觸發",
+        "Codex 在獨立 worktree 與 workspace-write sandbox 執行",
+        "只有 data/eva-questions.json 可進入自動 commit",
+        "JSON 與專案驗證失敗時不得 push 或前進游標",
+        "成功後 commit 並 push origin main",
+        "repo 不含 LINE user ID、group ID、token 或認證資料",
+        "公開 JSON 使用快取破壞參數載入",
+        "安裝後 dry-run、launchd plist 與 verify_project.py 通過"
+      ],
+      "human_review_required": false,
+      "evidence": []
+    },
+    {
       "id": "P2-EQUIP-PFE",
       "priority": 2,
       "order": 500,
