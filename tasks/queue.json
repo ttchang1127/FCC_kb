@@ -463,7 +463,7 @@
       "id": "P1-CFR-1.70016",
       "priority": 1,
       "order": 210,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70016 Streamlining eligibility 條文卡",
@@ -483,7 +483,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:43:13Z",
+          "summary": "一般與renewal資格、foreign-carrier三路、10% ownership、CZMA 30日、non-WTO排除分列；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:42:39Z",
+      "completed_at": "2026-08-01T06:43:13Z"
     },
     {
       "id": "P1-CFR-1.70017",
