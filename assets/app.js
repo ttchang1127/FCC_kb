@@ -465,7 +465,7 @@ function renderEvaQuestions(feed) {
 
 async function loadEvaQuestions() {
   try {
-    const response = await fetch("data/eva-questions.json", { cache: "no-store" });
+    const response = await fetch("data/eva-questions.json?v=" + Date.now(), { cache: "no-store" });
     if (!response.ok) throw new Error("HTTP " + response.status);
     const feed = await response.json();
     if (!isValidEvaFeed(feed)) throw new Error("Invalid Eva questions schema");

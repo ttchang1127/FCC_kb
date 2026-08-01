@@ -976,7 +976,7 @@
       "id": "P1-AUTO-EVA-DAILY",
       "priority": 1,
       "order": 493,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "WEB_FEATURE",
       "title": "每日 05:00 自動處理 Eva LINE 提問並發布網頁",
@@ -1008,7 +1008,14 @@
         "安裝後 dry-run、launchd plist 與 verify_project.py 通過"
       ],
       "human_review_required": false,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T07:59:02Z",
+          "summary": "安裝 launchd 每日 05:00；只認私人授權清單 Eva user ID；LINE prompt injection 隔離；Codex workspace-write+network 在獨立 worktree；tracked allowlist 僅 data/eva-questions.json；驗證/問題原文/私人 ID/push gates；成功後才更新游標；既有 2 題初始化、待處理 0；Codex 非互動 AUTOMATION_OK；pipeline worktree self-test PASS；launchd 實跑 exit 0；34 個無效 Codex Icon refs 已移至可復原隔離區；full-vault PASS"
+        }
+      ],
+      "started_at": "2026-08-01T07:52:26Z",
+      "completed_at": "2026-08-01T07:59:02Z"
     },
     {
       "id": "P2-EQUIP-PFE",
