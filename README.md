@@ -2,6 +2,8 @@
 
 以繁體中文整理 FCC 對海底電纜登陸許可、SLTE、通報與容量申報的公開靜態網站。
 
+後續工作、跨電腦啟動方式及驗收標準請先讀 [`TODO.md`](TODO.md)。
+
 - 法規資料截至：2026-07-30（eCFR Title 47）
 - 人工查核日期：2026-08-01
 - 網站：啟用 GitHub Pages 後可由 `https://ttchang1127.github.io/FCC_kb/` 瀏覽
