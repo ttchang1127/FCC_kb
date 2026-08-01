@@ -364,7 +364,7 @@
       "id": "P1-CFR-1.70013",
       "priority": 1,
       "order": 180,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70013 Pro forma notification 條文卡",
@@ -384,7 +384,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:40:23Z",
+          "summary": "pro forma actual-control test、免事前核准、consummation後30日與11項資料逐段；連回1.70012；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:39:55Z",
+      "completed_at": "2026-08-01T06:40:23Z"
     },
     {
       "id": "P1-CFR-1.70014",
