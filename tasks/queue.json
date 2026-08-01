@@ -936,6 +936,36 @@
       "completed_at": "2026-08-01T07:34:25Z"
     },
     {
+      "id": "P1-WEB-ASSET-CACHE-BUST",
+      "priority": 1,
+      "order": 492,
+      "status": "ready",
+      "mode": "public",
+      "recipe": "WEB_FEATURE",
+      "title": "避免 GitHub Pages 新 HTML 與舊 CSS 快取混搭",
+      "depends_on": [
+        "P1-WEB-EVA-LAYOUT-FIX"
+      ],
+      "sources": [
+        "index.html",
+        "assets/site.css",
+        "assets/app.js"
+      ],
+      "targets": [
+        "index.html"
+      ],
+      "acceptance": [
+        "CSS 與 JS 使用相同且明確的部署版本參數",
+        "一般瀏覽器快取不再沿用先前無版本資產",
+        "線上 HTML 指向版本化 CSS 與 JS",
+        "1440px 兩張 Eva 問題卡同欄等寬",
+        "390px 無水平溢位",
+        "verify_project.py 通過"
+      ],
+      "human_review_required": false,
+      "evidence": []
+    },
+    {
       "id": "P2-EQUIP-PFE",
       "priority": 2,
       "order": 500,
