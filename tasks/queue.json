@@ -862,6 +862,37 @@
       "completed_at": "2026-08-01T07:03:25Z"
     },
     {
+      "id": "P1-WEB-EVA-QUESTIONS",
+      "priority": 1,
+      "order": 490,
+      "status": "ready",
+      "mode": "full_vault",
+      "recipe": "WEB_FEATURE",
+      "title": "新增 Eva 問題集網站頁籤與日期主題回應",
+      "depends_on": [],
+      "sources": [
+        "Eva_Chang_發言及問題/00_索引.md",
+        "Eva_Chang_發言及問題/01_2026-08-01_FCC中國業者限制與中華電信海纜.md",
+        "Eva_Chang_發言及問題/02_2026-08-01_其他國家地緣政治法規風險.md"
+      ],
+      "targets": [
+        "data/eva-questions.json",
+        "index.html",
+        "assets/app.js",
+        "assets/site.css"
+      ],
+      "acceptance": [
+        "主導覽有 Eva 問題集 tab 且可鍵盤操作",
+        "問題依提問日期呈現並含完整回應與主題標籤",
+        "公開內容不含 LINE user ID、group ID、token 或其他私人資料",
+        "資料 JSON 載入失敗時仍有安全 fallback",
+        "桌面與 390px 手機無水平溢位",
+        "verify_project.py 與 JavaScript syntax 通過"
+      ],
+      "human_review_required": true,
+      "evidence": []
+    },
+    {
       "id": "P2-EQUIP-PFE",
       "priority": 2,
       "order": 500,
