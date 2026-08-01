@@ -900,6 +900,35 @@
       "completed_at": "2026-08-01T07:27:49Z"
     },
     {
+      "id": "P1-WEB-EVA-LAYOUT-FIX",
+      "priority": 1,
+      "order": 491,
+      "status": "ready",
+      "mode": "public",
+      "recipe": "WEB_FEATURE",
+      "title": "修正 Eva 問題集多題 Grid 排版",
+      "depends_on": [
+        "P1-WEB-EVA-QUESTIONS"
+      ],
+      "sources": [
+        "data/eva-questions.json"
+      ],
+      "targets": [
+        "index.html",
+        "assets/app.js",
+        "assets/site.css"
+      ],
+      "acceptance": [
+        "同一日期的所有問題卡固定顯示於內容欄",
+        "不同日期各自形成日期與問題清單群組",
+        "1440px 兩張卡等寬且無異常高度",
+        "390px 單欄無水平溢位",
+        "verify_project.py 與 JavaScript syntax 通過"
+      ],
+      "human_review_required": false,
+      "evidence": []
+    },
+    {
       "id": "P2-EQUIP-PFE",
       "priority": 2,
       "order": 500,
