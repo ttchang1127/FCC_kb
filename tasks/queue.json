@@ -265,7 +265,7 @@
       "id": "P1-CFR-1.70010",
       "priority": 1,
       "order": 150,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70010 Amendment of applications 條文卡",
@@ -285,7 +285,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:37:50Z",
+          "summary": "觸發事件、final action/hearing 截止點、同方式簽署提交及 objection service 均回查未編號段落；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:37:26Z",
+      "completed_at": "2026-08-01T06:37:50Z"
     },
     {
       "id": "P1-CFR-1.70011",
