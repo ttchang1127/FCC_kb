@@ -131,7 +131,7 @@
       "id": "P1-CFR-1.70002",
       "priority": 1,
       "order": 110,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70002 General requirements 條文卡",
@@ -151,7 +151,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:34:43Z",
+          "summary": "建立 General requirements 卡；適用範圍/一般要求分列；20年與2025-11-26門檻附 paragraph；instruction 7 標 future_effective；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:34:00Z",
+      "completed_at": "2026-08-01T06:34:43Z"
     },
     {
       "id": "P1-CFR-1.70004",
