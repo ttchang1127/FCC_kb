@@ -727,7 +727,7 @@
       "id": "P1-CFR-1.40001",
       "priority": 1,
       "order": 300,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.40001 Executive Branch review 條文卡",
@@ -747,7 +747,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:51:12Z",
+          "summary": "referral/reportable foreign ownership/四排除類別分列；FCC discretion與independent decision；歷史1.767 crossref及FCC26 i4/i5延後警示；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:50:32Z",
+      "completed_at": "2026-08-01T06:51:12Z"
     },
     {
       "id": "P1-CFR-63.18",
