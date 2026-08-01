@@ -98,7 +98,7 @@
       "id": "P1-CFR-1.70000",
       "priority": 1,
       "order": 100,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70000 Purpose 條文卡",
@@ -118,7 +118,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:33:38Z",
+          "summary": "建立完整 Purpose 卡；eCFR 2026-07-30 與 FR 2026-13765 查核；paragraph/未規定欄位齊全；full-vault health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:33:09Z",
+      "completed_at": "2026-08-01T06:33:38Z"
     },
     {
       "id": "P1-CFR-1.70002",
