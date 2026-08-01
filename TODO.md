@@ -150,10 +150,10 @@ python3 scripts/update_regulatory_data.py --accept-current
 
 ### 5.2 官方變動通知
 
-- [ ] 條文或新 Federal Register 文件出現時，自動建立或更新單一 GitHub Issue。
-- [ ] 避免每天建立重複 Issue。
-- [ ] Issue 列出 section、舊／新 SHA-256、官方 URL 與發現時間。
-- [ ] Action 失敗時提供明確通知入口。
+- [x] 條文或新 Federal Register 文件出現時，自動建立或更新單一 GitHub Issue。
+- [x] 避免每天建立重複 Issue。
+- [x] Issue 列出 section、舊／新 SHA-256、官方 URL 與發現時間。
+- [x] Action 失敗時提供明確通知入口。
 
 驗收標準：不必每天打開網站，也能知道官方來源是否發生變動。
 

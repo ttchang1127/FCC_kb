@@ -64,7 +64,7 @@
       "id": "P0-CHANGE-ALERT",
       "priority": 0,
       "order": 20,
-      "status": "ready",
+      "status": "done",
       "mode": "public",
       "recipe": "CHANGE_ALERT",
       "title": "官方來源變動時建立或更新單一 GitHub Issue",
@@ -85,7 +85,14 @@
         "verify_project.py 通過"
       ],
       "human_review_required": false,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:29:23Z",
+          "summary": "review_required/current 合成測試通過；固定 title+label 單一 Issue；包含 section/hash/FR/URL/generated_at；最小權限；public/full-vault 驗證通過"
+        }
+      ],
+      "started_at": "2026-08-01T06:27:58Z",
+      "completed_at": "2026-08-01T06:29:23Z"
     },
     {
       "id": "P1-CFR-1.70000",

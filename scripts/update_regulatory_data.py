@@ -226,6 +226,91 @@ def write_json(path: Path, data: dict) -> None:
     path.write_text(payload, encoding="utf-8")
 
 
+def markdown_cell(value: object) -> str:
+    """Escape untrusted official-source text for a Markdown table cell."""
+    if value is None or value == "":
+        return "—"
+    return compact_text(str(value)).replace("|", "\\|")
+
+
+def build_change_alert_body(result: dict) -> str:
+    """Build the fixed GitHub Issue body used for human legal review."""
+    review = result["review"]
+    lines = [
+        "<!-- fcc-kb-regulatory-review -->",
+        "# FCC 官方來源變動待人工複核",
+        "",
+        "> 自動偵測只代表官方來源內容或文件清單有變動，不代表法律狀態已完成判讀。",
+        "",
+        f"- 發現時間（UTC）：`{markdown_cell(result.get('generated_at'))}`",
+        f"- eCFR 資料截至：`{markdown_cell(result.get('ecfr', {}).get('up_to_date_as_of'))}`",
+        f"- 人工基準截至：`{markdown_cell(review.get('ecfr_reviewed_as_of'))}`",
+        f"- 自動狀態：`{markdown_cell(review.get('status'))}`",
+        "",
+        "## eCFR section changes",
+        "",
+    ]
+    section_changes = review.get("section_changes") or []
+    if section_changes:
+        lines.extend(
+            [
+                "| Section | Change | Reviewed SHA-256 | Current SHA-256 | Official source |",
+                "|---|---|---|---|---|",
+            ]
+        )
+        for item in section_changes:
+            lines.append(
+                "| §{section} | {change} | `{old}` | `{new}` | [eCFR]({url}) |".format(
+                    section=markdown_cell(item.get("section")),
+                    change=markdown_cell(item.get("change")),
+                    old=markdown_cell(item.get("reviewed_sha256")),
+                    new=markdown_cell(item.get("current_sha256")),
+                    url=markdown_cell(item.get("official_url")),
+                )
+            )
+    else:
+        lines.append("無 section hash 變動。")
+
+    lines.extend(["", "## New Federal Register documents", ""])
+    documents = review.get("new_federal_register_documents") or []
+    if documents:
+        lines.extend(
+            [
+                "| Document | Publication date | Type | Citation | Official URL |",
+                "|---|---|---|---|---|",
+            ]
+        )
+        for item in documents:
+            url = item.get("html_url") or item.get("pdf_url") or ""
+            lines.append(
+                "| {number} — {title} | {date} | {type} | {citation} | [Federal Register]({url}) |".format(
+                    number=markdown_cell(item.get("document_number")),
+                    title=markdown_cell(item.get("title")),
+                    date=markdown_cell(item.get("publication_date")),
+                    type=markdown_cell(item.get("type")),
+                    citation=markdown_cell(item.get("citation")),
+                    url=markdown_cell(url),
+                )
+            )
+    else:
+        lines.append("無新 Federal Register 文件。")
+
+    lines.extend(
+        [
+            "",
+            "## 人工處理規則",
+            "",
+            "1. 依 Federal Register、eCFR 與 FCC 命令判斷法律狀態。",
+            "2. 不得因 hash 改變或 future amendment 標記自動接受新基準。",
+            "3. 完成中文卡、矩陣與網站複核後，才可執行 `--accept-current`。",
+            "4. 完成並提交人工基準後，由人員關閉本 Issue。自動流程不會自行關閉。",
+            "",
+            "[查看自動更新 workflow](https://github.com/ttchang1127/FCC_kb/actions/workflows/update-regulations.yml)",
+        ]
+    )
+    return "\n".join(lines) + "\n"
+
+
 def accepted_baseline(sections: list[dict], documents: list[dict], as_of: str) -> dict:
     return {
         "schema_version": 1,
@@ -350,12 +435,20 @@ def main() -> int:
         action="store_true",
         help="Replace the human-review baseline with current official source hashes.",
     )
+    parser.add_argument(
+        "--issue-body-output",
+        type=Path,
+        help="Write a deterministic regulatory-review GitHub Issue body to this path.",
+    )
     args = parser.parse_args()
     try:
         result = build(accept_current=args.accept_current)
     except (RuntimeError, urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
         print(f"Regulatory update failed: {exc}")
         return 1
+    if args.issue_body_output:
+        args.issue_body_output.parent.mkdir(parents=True, exist_ok=True)
+        args.issue_body_output.write_text(build_change_alert_body(result), encoding="utf-8")
     print(f"eCFR Title 47 as of: {result['ecfr']['up_to_date_as_of']}")
     print(
         "Sections: "
