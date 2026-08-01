@@ -595,7 +595,7 @@
       "id": "P1-CFR-1.70022",
       "priority": 1,
       "order": 250,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70022 Action, revocation and termination 條文卡",
@@ -615,7 +615,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:46:45Z",
+          "summary": "revocation/termination 分列且不自行定義互換；case-by-case、APA cure限制與record response回查；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:46:16Z",
+      "completed_at": "2026-08-01T06:46:45Z"
     },
     {
       "id": "P1-CFR-1.70023",
