@@ -661,7 +661,7 @@
       "id": "P1-CFR-1.70024",
       "priority": 1,
       "order": 270,
-      "status": "ready",
+      "status": "done",
       "mode": "full_vault",
       "recipe": "CFR_CARD",
       "title": "建立 §1.70024 One-time security certification 條文卡",
@@ -681,7 +681,14 @@
         "full vault health pass"
       ],
       "human_review_required": true,
-      "evidence": []
+      "evidence": [
+        {
+          "recorded_at": "2026-08-01T06:48:32Z",
+          "summary": "91 FR 42137 confirms effective；existing/pending一次性認證、30日/1年/2年、in-service例外與ICFS附件分列；health pass"
+        }
+      ],
+      "started_at": "2026-08-01T06:47:50Z",
+      "completed_at": "2026-08-01T06:48:32Z"
     },
     {
       "id": "P1-STATUS-PLACEHOLDERS",
