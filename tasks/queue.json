@@ -1018,6 +1018,37 @@
       "completed_at": "2026-08-01T07:59:02Z"
     },
     {
+      "id": "P1-AUTO-EVA-AUDIT",
+      "priority": 1,
+      "order": 494,
+      "status": "ready",
+      "mode": "full_vault",
+      "recipe": "WEB_FEATURE",
+      "title": "保存每日 Eva LINE 排程執行紀錄",
+      "depends_on": [
+        "P1-AUTO-EVA-DAILY"
+      ],
+      "sources": [
+        "scripts/process_eva_line_questions.mjs",
+        "docs/EVA_LINE_AUTOMATION.md"
+      ],
+      "targets": [
+        "scripts/process_eva_line_questions.mjs",
+        "docs/EVA_LINE_AUTOMATION.md",
+        "99_資料治理/Eva_LINE排程執行紀錄.md"
+      ],
+      "acceptance": [
+        "每日正常執行均寫入 Asia/Taipei 觸發時間、觸發來源、結果與待處理數",
+        "待處理數為 0 時仍保存一筆 no_new_questions 紀錄",
+        "dry-run、self-test 與 pipeline self-test 不污染正式執行紀錄",
+        "紀錄不含 LINE user ID、group ID、token、訊息原文或其他私人識別資料",
+        "既有 2026-08-02 05:00 成功執行補入稽核紀錄",
+        "launchd 實跑與 full-vault 驗證通過"
+      ],
+      "human_review_required": false,
+      "evidence": []
+    },
+    {
       "id": "P2-EQUIP-PFE",
       "priority": 2,
       "order": 500,
