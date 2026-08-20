@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-19T20:48:28Z",
+  "generated_at": "2026-08-20T20:50:20Z",
   "automation": {
     "schedule": "daily",
     "source": "GitHub Actions",
@@ -16,7 +16,7 @@
   },
   "ecfr": {
     "title": 47,
-    "up_to_date_as_of": "2026-08-17",
+    "up_to_date_as_of": "2026-08-18",
     "latest_amended_on": "2026-08-13",
     "latest_issue_date": "2026-08-13",
     "official_url": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-FF",
@@ -30,21 +30,21 @@
         "title": "§ 1.70000 Purpose.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "17cbbcaccb136399506eeeb1e8eda3efa62804ef77539d31f35416541b467f31",
         "paragraphs": [
           "The provisions contained in this subpart implement the Cable Landing License Act of 1921, codified at 47 U.S.C. 34 through 39, as amended, and section 5(a) of Executive Order 10530, dated May 10, 1954, and provide requirements for initial applications for a cable landing license; certifications; routine conditions; requests for special temporary authority; foreign carrier affiliation notifications; amendment of applications; modification applications; substantial assignment and transfer of control of a cable landing license; pro forma assignment and transfer of control notifications; requests for streamlining of applications; quarterly reports; foreign adversary annual reports; renewal or extension applications; public viewing of applications; electronic filing; and provide for the grant, denial, revocation, and termination of cable landing license applications or licenses."
         ],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70000",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70001",
         "title": "§ 1.70001 Definitions.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "20e69a41384a4f6c37f84dbca2a63a8d7eb44588b80906eb0b6903694e2bb1c5",
         "paragraphs": [
           "(a) Affiliated. The term “affiliated” as used in this subpart is defined as in § 63.09 of this chapter.",
@@ -64,14 +64,14 @@
         ],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70001",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70002",
         "title": "§ 1.70002 General requirements.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "0385aa10a9bef375110b96d4bb7b6eaf4016bb00a618953d8817d083fe3537ae",
         "paragraphs": [
           "(a) Cable landing license requirements. A cable landing license must be obtained prior to landing a submarine cable that connects:",
@@ -105,14 +105,14 @@
           "[90 FR 48690, Oct. 27, 2025, as amended at 90 FR 48694, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70002",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70003",
         "title": "§ 1.70003 Applicant/licensee requirements.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "36fe16b5474f623bc48aceb95962f1f6f365781401ffa39c824b520faf4d2c9c",
         "paragraphs": [
           "Except as otherwise required by the Commission, the following entities, at a minimum, shall be applicants for, and licensees on, a cable landing license:",
@@ -123,14 +123,14 @@
           "[90 FR 48694, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70003",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70004",
         "title": "§ 1.70004 Additional presumptive disqualifying conditions.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "62572764726f2c387029968c66ca12fc4c7401fd3a9ae7e622f010c908d7cb87",
         "paragraphs": [
           "(a) Foreign adversary presumptive disqualifying condition—(1) Presumptive disqualifying condition. The disqualifying condition will presumptively preclude the grant of an application, as specified in paragraph (a)(2) of this section, filed by any applicant:",
@@ -153,14 +153,14 @@
         ],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70004",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70005",
         "title": "§ 1.70005 Initial application for a cable landing license.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "f9b04b68a95181a89d7950a77e80b0763772228e3989aaf1f9eb075ef0ddbacc",
         "paragraphs": [
           "An applicant must demonstrate in the initial application for a cable landing license that it meets the requirements under § 1.70002(b) and (c), and the initial application must contain:",
@@ -219,14 +219,14 @@
           "[90 FR 48695, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70005",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70006",
         "title": "§ 1.70006 Certifications.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "17ee04edce74ddd77bdca772957e0ffaea66053ee1d870250249d7309757aa49",
         "paragraphs": [
           "An applicant must certify to the following in the initial application for a cable landing license:",
@@ -248,14 +248,14 @@
           "[90 FR 48695, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70006",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70007",
         "title": "§ 1.70007 Routine conditions.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "de2c106132058d17dffab4515a16abc4e3cd366799876acf39d59a6ff132e0ba",
         "paragraphs": [
           "Except as otherwise ordered by the Commission, this section applies to each licensee of a cable landing license.",
@@ -306,14 +306,14 @@
           "[90 FR 48690, Oct. 27, 2025, as amended at 90 FR 48697, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70007",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70008",
         "title": "§ 1.70008 Requests for special temporary authority.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "a7b73490adbd591abcbeaf35f7a13ca205cdee4f85e092121b03fcf5cb2cfecc",
         "paragraphs": [
           "(a) Special temporary authority may be used for construction, testing, or operation of a submarine cable system for a term up to and including 180 days.",
@@ -335,14 +335,14 @@
           "[90 FR 48697, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70008",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70009",
         "title": "§ 1.70009 Notification by and prior approval for cable landing licensees that are or propose to become affiliated with a foreign carrier.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "c61b145b17038e0e1af845fec5a2fd11e84d1ea72a5d76c0f060ef701f2cd293",
         "paragraphs": [
           "Any entity that is licensed by the Commission (“licensee”) to land or operate a submarine cable landing in a particular foreign destination market that becomes, or seeks to become, affiliated with a foreign carrier that is authorized to operate in that market, including an entity that owns or controls a cable landing station in that market, shall notify the Commission of that affiliation.",
@@ -384,28 +384,28 @@
           "[90 FR 48697, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70009",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70010",
         "title": "§ 1.70010 Amendment of applications.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "01c89d3842ce7dfb90aa269eb1c06e9bf87012c0260edfe6765906e53c9b118c",
         "paragraphs": [
           "Any application may be amended as a matter of right prior to the date of any final action taken by the Commission or designation for hearing. Amendments to applications shall be signed and submitted in the same manner as was the original application. If a petition to deny or other formal objection has been filed in response to the application, the amendment shall be served on the parties."
         ],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70010",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70011",
         "title": "§ 1.70011 Applications for modification of a cable landing license.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "d6630c9990c1e5237eb59cc39b22c50c953402aec04a880217cc72d35e9a4e31",
         "paragraphs": [
           "A separate application shall be filed with respect to each individual submarine cable system for which a licensee(s) seeks to modify the cable landing license. Each modification application shall include a narrative description of the proposed modification including relevant facts and circumstances leading to the request. Each modification application must contain information pursuant to §§ 1.70002(b) and (c) and 1.70004. Requirements for specific types of modification requests are set out below. For other situations, the licensee(s) should contact Commission staff regarding the required information for the modification application.",
@@ -480,14 +480,14 @@
           "[90 FR 48699, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70011",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70012",
         "title": "§ 1.70012 Substantial assignment or transfer of control applications.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "9a7802ac41586aa5e900d4ac1a8664c615b3025b6fc9984a9f102cf0ac462794",
         "paragraphs": [
           "(a) Each application for authority to assign or transfer control of an interest in a cable system shall contain information pursuant to §§ 1.70002(b) and (c) and 1.70004(a). The application shall contain a certification as to whether or not the licensee, assignor/transferor, or assignee/transferee exhibit any of the criteria set out in the presumptive disqualifying conditions under §§ 1.70002(c)(1) and 1.70004(a)(1).",
@@ -507,14 +507,14 @@
           "[90 FR 48699, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70012",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70013",
         "title": "§ 1.70013 Pro forma assignment and transfer of control notifications.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "5ff4b65591533f124e48d2f1e0ce2e66497e2184196f59997d3b46726a13128c",
         "paragraphs": [
           "(a) A pro forma assignee or a licensee that is the subject of a pro forma transfer of control of a cable landing license is not required to seek prior approval for the pro forma transaction. A pro forma assignee or licensee that is the subject of a pro forma transfer of control must notify the Commission no later than thirty (30) days after the assignment or transfer of control is consummated.",
@@ -535,14 +535,14 @@
           "[90 FR 48699, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70013",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70014",
         "title": "§ 1.70014 Processing of applications.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "8b9dc717a8de8564ba9834bb789fc235099b39839e2add777ab23bb82d079793",
         "paragraphs": [
           "(a) Processing of submarine cable applications. The Commission will take action upon an application eligible for streamlined processing, as specified in § 1.70016, within forty-five (45) days after release of the public notice announcing the application as acceptable for filing and eligible for streamlined processing. If the Commission deems an application seeking streamlined processing acceptable for filing but ineligible for streamlined processing due to national security or law enforcement concerns or other public interest considerations, or if an applicant does not seek streamlined processing, the Commission will issue public notice indicating that the application is ineligible for streamlined processing. Within ninety (90) days of the public notice, the Commission will take action upon the application or provide public notice that, because the application raises questions of extraordinary complexity, an additional 90-day period for review is needed. Each successive 90-day period may be so extended.",
@@ -550,14 +550,14 @@
         ],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70014",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70015",
         "title": "§ 1.70015 Quarterly reports.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "c5816ebcb6ac7738e42109bcff7e7917dc644c0bf973558f81d458d73b694ff8",
         "paragraphs": [
           "Any licensee that is, or is affiliated with, a carrier with market power in any of the cable's destination countries must comply with the following requirements:",
@@ -569,14 +569,14 @@
         ],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70015",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70016",
         "title": "§ 1.70016 Eligibility for streamlining.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "7e9f28e3234a7049ab4869c99277f99c055c83f5a1274a1a7edd272e59858a20",
         "paragraphs": [
           "(a) Eligibility for streamlining. Each applicant must demonstrate eligibility for streamlining, except as otherwise set out in paragraph (b) of this section, by:",
@@ -598,14 +598,14 @@
           "[90 FR 48690, Oct. 27, 2025, as amended at 90 FR 48702, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70016",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70017",
         "title": "§ 1.70017 Foreign adversary annual report for licensees.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "10e49c357b2de07dca1eff0862b6890d339e72d27c693c164e8b628f1af42810",
         "paragraphs": [
           "(a) Annual report. Licensees shall file every year an annual report in the relevant File Number in the Commission's International Communications Filing System (ICFS), or any successor system.",
@@ -624,38 +624,38 @@
           "[90 FR 48702, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70017",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70018",
         "title": "§ 1.70018 xxx",
         "available": true,
         "content_status": "future_placeholder",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "d0847636d35a3d4b0fc3686057838623ae9d5b8a12338a780981b700097dca4f",
         "paragraphs": [],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70018",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70019",
         "title": "§ 1.70019 [Reserved]",
         "available": true,
         "content_status": "reserved",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "617fe6b7b0afdaffa664325b8b32df1625cb8ab7bce3928109df00cb488089bb",
         "paragraphs": [],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70019",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70020",
         "title": "§ 1.70020 Renewal and extension applications.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "2ad2bf68cd28ad2cb5b3af0344194edf255d7d77b5c76cb2d9197b4ca23979a5",
         "paragraphs": [
           "(a) Licensees seeking to renew or extend a cable landing license shall file an application six months prior to the expiration of the license.",
@@ -666,14 +666,14 @@
           "[90 FR 48702, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70020",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70021",
         "title": "§ 1.70021 Electronic filing.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "237966577a0176d7f301da1d1075c7f987ef53cf6781e27c1de978cff83697b6",
         "paragraphs": [
           "(a) With the exception of submarine cable outage reports, and subject to the availability of electronic forms, all applications and notifications described in this subpart must be filed electronically through the International Communications Filing System (ICFS). A list of forms that are available for electronic filing can be found on the ICFS homepage. For information on electronic filing requirements, see subpart Y of this part, and the ICFS homepage at https://www.fcc.gov/icfs. See also §§ 63.20 and 63.53 of this chapter.",
@@ -681,28 +681,28 @@
         ],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70021",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70022",
         "title": "§ 1.70022 Action on applications, revocation, and termination.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "d716ebc6840bdf3766822e333642045bd0f2c63ae1d33c1f95588b5fca87527b",
         "paragraphs": [
           "The Office of International Affairs shall determine appropriate procedures on a case by case basis for grant or denial of an application or revocation and/or termination of a cable landing license, and grant or deny an application, initiate and conduct application, revocation, and/or termination proceedings, and revoke and/or terminate a cable landing license, as required by due process and applicable law and in light of the relevant facts and circumstances, including providing the applicant or licensee with notice and opportunity to cure noncompliance to the extent such an opportunity is required by the Administrative Procedure Act, 5 U.S.C. 558(c), and to respond to allegations and evidence in the record."
         ],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70022",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70023",
         "title": "§ 1.70023 Covered list certification for cable landing licensees.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "231ea7a39560d16c0c8b45392ba02a74f389a25d0144a7fea78647a4b5098ced",
         "paragraphs": [
           "Each cable landing licensee shall submit a certification, within sixty (60) days of [effective date of amendatory instruction 19], that it will not add to its submarine cable system(s) under its respective license(s) equipment or services identified on the Covered List that the Commission maintains on its website pursuant to the Secure Networks Act, 47 U.S.C. 1601 through 1609; except, this condition shall not apply to a licensee that is identified on the Covered List whose cable landing license was or is granted prior to [effective date of amendatory instruction 19]."
@@ -711,14 +711,14 @@
           "[90 FR 48703, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70023",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70024",
         "title": "§ 1.70024 One-time cybersecurity and physical security certification.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "d302e005dbc519bbe8e4b7374ef169789b73fec3964a527c4b84721a1617003b",
         "paragraphs": [
           "(a) Existing licensees. Each licensee whose cable landing license was granted before [effective date of amendatory instruction 19], must:",
@@ -732,74 +732,74 @@
           "[90 FR 48703, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70024",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70025",
         "title": "§ 1.70025 xxx",
         "available": true,
         "content_status": "future_placeholder",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "21257c8e96a033ca6847ee585f49d91b824c1e4c2dd7d08b2feee1a852dd80ec",
         "paragraphs": [],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70025",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70026",
         "title": "§ 1.70026 xxx",
         "available": true,
         "content_status": "future_placeholder",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "070bbf1e8e9b18cee80906931889ddd14a79b78f2a4fb81f0183f8bfc2bc515f",
         "paragraphs": [],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70026",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70027",
         "title": "§ 1.70027 xxx",
         "available": true,
         "content_status": "future_placeholder",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "586cc9cffe709cbdb6982b08f8066ce76c64790c18a316f2578790c2c2a806c8",
         "paragraphs": [],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70027",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70028",
         "title": "§ 1.70028 xxx",
         "available": true,
         "content_status": "future_placeholder",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "93976aa5883c933e15d03be643ab686f007d23d319c4ad8c2237acb3c03148cf",
         "paragraphs": [],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70028",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "1.70029",
         "title": "§ 1.70029 xxx",
         "available": true,
         "content_status": "future_placeholder",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "6fa6a7683ca423ce17e803fe30852899e70c2556802444b3f55483e98e5fc2b6",
         "paragraphs": [],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.70029",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?part=1&subpart=FF"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?part=1&subpart=FF"
       },
       {
         "section": "4.15",
         "title": "§ 4.15 Submarine cable outage reporting.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "07d8a53d97ccdc256061f50f0cfdcc06a422fb6977c086e6b63a6fdac93f2e35",
         "paragraphs": [
           "(a) Definitions. (1) For purposes of this section, “outage” is defined as a failure or significant degradation in the performance of a licensee's cable service regardless of whether the traffic can be re-routed to an alternate path, where:",
@@ -821,14 +821,14 @@
           "[81 FR 52363, Aug. 8, 2016, as amended at 85 FR 15740, Mar. 19, 2020; 86 FR 22361, Apr. 28, 2021]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-4.15",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?section=4.15"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?section=4.15"
       },
       {
         "section": "43.82",
         "title": "§ 43.82 Circuit capacity reports.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "a55a5d7aca009803b16d764ce687fccc51a8b5bdbf53073ec26739c1b45b1c05",
         "paragraphs": [
           "(a)Submarine cable capacity. Not later than March 31 of each year:",
@@ -844,14 +844,14 @@
           "[82 FR 55331, Nov. 21, 2017, as amended at 88 FR 21442, Apr. 10, 2023; 90 FR 48703, Oct. 27, 2025; 90 FR 48703, Oct. 27, 2025]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-43.82",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?section=43.82"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?section=43.82"
       },
       {
         "section": "63.18",
         "title": "§ 63.18 Contents of applications for international common carriers.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "f3d6eac44d5d3cdb7d2b55ea958faf8137d215f58b625c400b97640b274dbb09",
         "paragraphs": [
           "Except as otherwise provided in this part, any party seeking authority pursuant to Section 214 of the Communications Act of 1934, as amended, to construct a new line, or acquire or operate any line, or engage in transmission over or by means of such additional line for the provision of common carrier communications services between the United States, its territories or possessions, and a foreign point shall request such authority by formal application. The application shall include information demonstrating how the grant of the application will serve the public interest, convenience, and necessity. Such demonstration shall consist of the following information, as applicable:",
@@ -910,14 +910,14 @@
           "[61 FR 15729, Apr. 9, 1996, as amended at 62 FR 32965, June 17, 1997; 62 FR 45762, Aug. 29, 1997; 62 FR 64755, Dec. 9, 1997; 63 FR 24121, May 1, 1998; 64 FR 19064, Apr. 19, 1999; 65 FR 60117, Oct. 10, 2000; 67 FR 45390, July 9, 2002; 69 FR 29902, May 26, 2004; 70 FR 38798, July 6, 2005; 72 FR 54366, Sept. 25, 2007; 78 FR 15623, Mar. 12, 2013; 79 FR 31877, June 3, 2014; 80 FR 45898, Aug. 3, 2015; 88 FR 21443, Apr. 10, 2023; 87 FR 76385, Nov. 27, 2020]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-63.18",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?section=63.18"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?section=63.18"
       },
       {
         "section": "1.40001",
         "title": "§ 1.40001 Executive branch review of applications, petitions, other filings, and existing authorizations or licenses with reportable foreign ownership.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "dafcd7122192779b62e5747c0a95363b25d95af34d960158bf6f991352aa5796",
         "paragraphs": [
           "(a) The Commission, in its discretion, may refer applications, petitions, and other filings to the executive branch for review for national security, law enforcement, foreign policy, and/or trade policy concerns.",
@@ -936,14 +936,14 @@
           "[85 FR 76383, Nov. 27, 2020, as amended at 85 FR 76385, Nov. 27, 2020]"
         ],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.40001",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?section=1.40001"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?section=1.40001"
       },
       {
         "section": "1.50002",
         "title": "§ 1.50002 Covered List.",
         "available": true,
         "content_status": "current_text",
-        "as_of": "2026-08-17",
+        "as_of": "2026-08-18",
         "sha256": "476e0989b401bde731c0ca489408ad87f172616a9b00b1a7dbb7ed6877d67ad5",
         "paragraphs": [
           "(a) Publication of the Covered List. The Public Safety and Homeland Security Bureau shall publish the Covered List on the Commission's website and shall maintain and update the Covered List in accordance with § 1.50003.",
@@ -960,7 +960,7 @@
         ],
         "citations": [],
         "official_url": "https://www.ecfr.gov/current/title-47/section-1.50002",
-        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-17/title-47.xml?section=1.50002"
+        "api_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-08-18/title-47.xml?section=1.50002"
       }
     ]
   },
